@@ -1,25 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link }from 'react-router-dom'
 import styled from 'styled-components'
+import { Burger } from './Burger'
 
-export const Header = () => {
-
+const Navbar = () => {
   return (
-    <div>
-      <Navbar>
-        <StyledLink to={'/'}>REX Animation</StyledLink>
-        <StyledLink to={'/movies'}>Movies</StyledLink>
-        <StyledLink to={'/programme'}>Programme</StyledLink>
-        <StyledLink to={'/venues'}>Venues</StyledLink>
-        <StyledLink to={'/skolbio'}>Skolbio</StyledLink>
-        <StyledLink to={'/awards'}>Awards</StyledLink>
-        <StyledLink to={'/aboutpage'}>About Rex</StyledLink>
-      </Navbar>
-    </div>
+    <NavContainer>
+      <StyledLink to={'/'}>REX Animation</StyledLink>
+      <StyledLink to={'/movies'}>Movies</StyledLink>
+      <StyledLink to={'/programme'}>Programme</StyledLink>
+      <StyledLink to={'/venues'}>Venues</StyledLink>
+      <StyledLink to={'/skolbio'}>Skolbio</StyledLink>
+      <StyledLink to={'/awards'}>Awards</StyledLink>
+      <StyledLink to={'/aboutpage'}>About Rex</StyledLink>
+    </NavContainer>
   )
 }
 
-const Navbar = styled.div`
+export const Header = () => {
+  const [open, setOpen] = useState(false)
+
+  return ( 
+    <div>
+      <button onClick={() => setOpen(prev => !prev) }><Burger /></button>
+      {open && <Navbar />}
+    </div> 
+  )
+} 
+
+const NavContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -34,5 +43,9 @@ const StyledLink = styled(Link)`
 
   &:hover {
     color: red;
+  }
+
+  &:active {
+    color: grey;
   }
 `
