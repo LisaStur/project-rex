@@ -12,6 +12,7 @@ export const Burger = () => {
 )
 }
 
+
 const Bar = styled.div`
   display: flex;
   flex-direction: column;
