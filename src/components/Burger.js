@@ -13,10 +13,11 @@ export const Burger = () => {
 }
 
 
+
 const Bar = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: black;
+  background-color: white;
   width: 33px;
   height: 4px;
   margin-bottom: 5px;

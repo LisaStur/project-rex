@@ -37,18 +37,28 @@ export const Header = () => {
   const [open, setOpen] = useState(false)
 
   return ( 
-    <div>
+    <HeaderContainer>
       <Btn onClick={() => setOpen(prev => !prev) }><Burger /></Btn>
       {open && <Navbar />}
       <NavbarBigScreen />
-      
-    </div> 
+    </HeaderContainer> 
   )
 } 
 
+const HeaderContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @media (min-width: 668px) {
+    align-items: center;
+  }
+`
+
 const Btn = styled.button`
-  background-color: white;
+  background-color: transparent;
   border: none;
+  padding-top: 3%;
 
   &:focus {
     outline: none;
@@ -63,6 +73,7 @@ const NavContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  margin-right: 3%;
   
   @media (min-width: 668px) {
     visibility: hidden;
@@ -79,13 +90,18 @@ const NavContainerBigScreen = styled.div `
 `
 const StyledLink = styled(Link)`
   text-decoration: none;
-  padding-right: 16px;
+  color: white;
+  fonst-size: 12px;
+  
 
   &:hover {
-    color: red;
+    color: black;
   }
 
-  &:active {
-    color: grey;
+ @media (min-width: 668px) {
+  font-size: 18px;
+  padding-right: 16px;
   }
+
+
 `

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import styled from 'styled-components'
 
 
 
@@ -8,7 +9,7 @@ export const Movies = () => {
 
   useEffect(() => {
     fetch(URL_MOVIES)
-      .then((res) => {
+      .then(res => {
         return res.json()
       })
       .then(data => {
@@ -17,16 +18,37 @@ export const Movies = () => {
   }, [])
 
   return (
-    <div>   
+    <MoviePage>   
       {movies.map(movie => (
-        <section key={movie._id}>
-          <h1> {movie.title}</h1>
-          <h3>{movie.originalTitle}</h3>
-          <h2>{movie.director}</h2>
-          <h3>{movie.country} {movie.productionYear} {movie.duration}min {movie.language}</h3>
-          <p>{movie.synopsis}</p>
-        </section>
+        <MovieCard key={movie._id}>
+          <h2>{movie.title}</h2>
+          <Image src={movie.imageUrl } />
+        </MovieCard>
       ))}
-    </div>
+    </MoviePage>
   )
 }
+
+const MoviePage = styled.section`
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+`
+
+const Image = styled.img`
+  width: 100%;
+  height: auto;
+
+  @media (min-width: 668px) {
+    width: 90%;
+    height: auto;
+  `
+const MovieCard = styled.section`
+    background-color: black;
+  width: 100%;
+  height: auto;
+
+  @media (min-width: 668px) {
+    width: 45%;
+    height: auto; 
+`
