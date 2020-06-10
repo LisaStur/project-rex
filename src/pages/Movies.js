@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 
 
 export const Movies = () => {
-  const URL_MOVIES = 'http://localhost:8080/movies'
- const [movies, setMovies]= useState([])
+  const [movies, setMovies]= useState([])
 
   useEffect(() => {
-    fetch(URL_MOVIES)
+    fetch('http://localhost:8080/movies')
       .then(res => {
         return res.json()
       })
@@ -20,9 +20,11 @@ export const Movies = () => {
   return (
     <MoviePage>   
       {movies.map(movie => (
-        <MovieCard key={movie._id}>
-          <h2>{movie.title}</h2>
-          <Image src={movie.imageUrl } />
+        <MovieCard key={movie.movieId}>
+          <Link to={`/movieinfo/${movie.movieId}`}>
+            <Image src={movie.imageUrl} />
+            <MovieTitle>{movie.title}</MovieTitle>
+          </Link>
         </MovieCard>
       ))}
     </MoviePage>
@@ -31,24 +33,34 @@ export const Movies = () => {
 
 const MoviePage = styled.section`
   display: flex;
-  flex-flow: row wrap;
-  align-items: stretch;
+  flex-direction: column;
+  align-items: center;
+  
+  @media (min-width: 668px) {
+  flex-flow: row wrap;  
 `
 
 const Image = styled.img`
   width: 100%;
   height: auto;
-
-  @media (min-width: 668px) {
-    width: 90%;
-    height: auto;
   `
+
 const MovieCard = styled.section`
-    background-color: black;
-  width: 100%;
+  background-color: black;
+  width: 90%;
   height: auto;
+  margin: 5%;
 
   @media (min-width: 668px) {
-    width: 45%;
+    width: 40%;
     height: auto; 
+    margin: 2%;
 `
+
+const MovieTitle = styled.h1`
+  color: white;
+  text-align: center;
+  padding-left: 2%;
+  padding-right 2%;
+  `
+

@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { StartPage } from 'pages/StartPage'
 import { Movies } from 'pages/Movies'
-//import { MovieInfo } from 'pages/MovieInfo'
+import { MovieInfo } from 'pages/MovieInfo'
 import { Programme } from 'pages/Programme'
 import { Venues } from 'pages/Venues'
 import { Skolbio } from 'pages/Skolbio'
@@ -12,7 +12,6 @@ import { Header } from 'components/Header'
 
 export const App = () => {
   return (
-    <div>
       <BrowserRouter>
         <Header />
         <Switch>
@@ -21,6 +20,9 @@ export const App = () => {
           </Route>
           <Route path='/movies'>
             <Movies />
+          </Route>
+          <Route path='/movieinfo'>
+            <MovieInfo />
           </Route>
           <Route path='/programme'>
             <Programme />
@@ -39,6 +41,5 @@ export const App = () => {
           </Route>
         </Switch>
       </BrowserRouter>
-    </div>
   )
 }

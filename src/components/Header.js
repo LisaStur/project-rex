@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import { Link }from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { Burger } from './Burger'
 
 const Navbar = () => {
   return (
     <NavContainer>
-      <StyledLink to={'/'}>REX Animation</StyledLink>
+      <StyledLink to={'/home'}>REX Animation</StyledLink>
       <StyledLink to={'/movies'}>Movies</StyledLink>
       <StyledLink to={'/programme'}>Programme</StyledLink>
       <StyledLink to={'/venues'}>Venues</StyledLink>
@@ -21,7 +21,7 @@ const NavbarBigScreen = () => {
 
   return (
     <NavContainerBigScreen>
-      <StyledLink to={'/'}>REX Animation</StyledLink>
+      <StyledLink to={'/home' }>REX Animation</StyledLink>
       <StyledLink to={'/movies'}>Movies</StyledLink>
       <StyledLink to={'/programme'}>Programme</StyledLink>
       <StyledLink to={'/venues'}>Venues</StyledLink>
@@ -66,6 +66,7 @@ const Btn = styled.button`
 
   @media (min-width: 668px) {
     visibility: hidden;
+    height: 0;
   }
 `
 
@@ -77,18 +78,21 @@ const NavContainer = styled.div`
   
   @media (min-width: 668px) {
     visibility: hidden;
+    height: 0;
   }
 `
 
 const NavContainerBigScreen = styled.div `
   visibility: hidden;
+  height: 0;
 
   @media (min-width: 668px) {
     visibility: visible;
+    justify-content: space-around;
   }
 
 `
-const StyledLink = styled(Link)`
+const StyledLink = styled(NavLink)`
   text-decoration: none;
   color: white;
   fonst-size: 12px;
@@ -98,9 +102,13 @@ const StyledLink = styled(Link)`
     color: black;
   }
 
+   &.active {
+    transform: (scale1:1)
+  }
+
  @media (min-width: 668px) {
   font-size: 18px;
-  padding-right: 16px;
+  padding: 5px;
   }
 
 
