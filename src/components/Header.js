@@ -103,7 +103,7 @@ const StyledLink = styled(NavLink)`
   }
 
    &.active {
-    transform: (scale1:1)
+    color: red;
   }
 
  @media (min-width: 668px) {

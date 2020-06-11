@@ -2,27 +2,25 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-
+const MOVIES_URL = 'http://localhost:8080/movies'
 
 export const Movies = () => {
   const [movies, setMovies]= useState([])
 
   useEffect(() => {
-    fetch('http://localhost:8080/movies')
-      .then(res => {
-        return res.json()
-      })
-      .then(data => {
-        setMovies(data)
+    fetch(MOVIES_URL)
+      .then(res => res.json())
+      .then(json => {
+        setMovies(json)
       })
   }, [])
 
   return (
     <MoviePage>   
       {movies.map(movie => (
-        <MovieCard key={movie.movieId}>
-          <Link to={`/movieinfo/${movie.movieId}`}>
-            <Image src={movie.imageUrl} />
+        <MovieCard key={movie.title}>
+          <Link to={`/movieinfo/${movie.title}`}>
+            <Image src={movie.imageUrl} alt={movie.title} />
             <MovieTitle>{movie.title}</MovieTitle>
           </Link>
         </MovieCard>
