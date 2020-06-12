@@ -19,10 +19,10 @@ export const Movies = () => {
     <MoviePage>   
       {movies.map(movie => (
         <MovieCard key={movie.title}>
-          <Link to={`/movieinfo/${movie.title}`}>
+          <MovieInfoLink to={`/movieinfo/${movie.title}`}>
             <Image src={movie.imageUrl} alt={movie.title} />
             <MovieTitle>{movie.title}</MovieTitle>
-          </Link>
+          </MovieInfoLink>
         </MovieCard>
       ))}
     </MoviePage>
@@ -37,12 +37,6 @@ const MoviePage = styled.section`
   @media (min-width: 668px) {
   flex-flow: row wrap;  
 `
-
-const Image = styled.img`
-  width: 100%;
-  height: auto;
-  `
-
 const MovieCard = styled.section`
   background-color: black;
   width: 90%;
@@ -54,9 +48,17 @@ const MovieCard = styled.section`
     height: auto; 
     margin: 2%;
 `
+const MovieInfoLink = styled(Link)`
+  text-decoration: none;
+`
 
+const Image = styled.img`
+  width: 100%;
+  height: auto;
+  `
 const MovieTitle = styled.h1`
   color: white;
+  font-size: 20px;
   height: 40px;
   text-align: center;
   padding-left: 2%;
