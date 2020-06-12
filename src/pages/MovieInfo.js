@@ -31,13 +31,16 @@ export const MovieInfo = () => {
 
   return (
     <InfoContainer>
+      <BigScreenContainer>
       <Image src={info.imageUrl} alt={info.title} />  
-      <InfoTextContainer>
-        <InfoTitle>{info.title}</InfoTitle>
-        <MainInfo>{info.director}</MainInfo>
-        <MainInfo>{info.originalTitle}, {info.country} {info.productionYear}, {info.duration}min</MainInfo>
+      <MainTextContainer>
+          <InfoTitle>{info.title}</InfoTitle>
+          <MainInfo>{info.director}</MainInfo>
+          <ProdInfo>{info.originalTitle} </ProdInfo> 
+          <ProdInfo>{info.country} {info.productionYear}, {info.duration}min</ProdInfo>
+      </MainTextContainer>
+      </BigScreenContainer> 
         <Synopsis>{info.synopsis}</Synopsis>
-      </InfoTextContainer>
     </InfoContainer>
   )
 }
@@ -46,43 +49,64 @@ const InfoContainer= styled.section`
   display: flex;
   flex-direction: column;
   margin: 5%;
-  background-color: black;
-
-  @media (min-width: 668px) {
-    flex-direction: row;    
+  background-color: black; 
+  padding 5%;
 `
-
 const Image = styled.img`
   width: 100%;
   height: auto;
 
-  @media (min-width: 668px) {
+  @media (min-width: 1024px) {
     width: auto;
     height: 300px;
+  }
   `
+const BigScreenContainer = styled.section`
+  display: flex;
+  flex-direction: column;
 
-const InfoTextContainer = styled.section`
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
+`
+const MainTextContainer = styled.section`
   display: flex;
   flex-direction: column;
 `
-
 const InfoTitle = styled.h1`
   color: white;
   font-size: 36px;
-  padding: 5%;
+  padding-top: 5%;
   margin: 0;
+
+  @media (min-width: 1024px) {
+    padding-left: 5%;
+    padding-top: 0;
+  }
   `
 const MainInfo = styled.h2`
   color: white;
   font-size: 24px;
-  padding-left: 5%;
   margin: 0;
- 
-  `
 
+  @media (min-width: 1024px) {
+    padding-left: 5%;
+    padding-top: 0;
+  }
+  `
+const ProdInfo = styled.h2`
+  color: white;
+  font-size: 20px;
+  margin: 0;
+
+  @media (min-width: 1024px) {
+    padding-left: 5%;
+    padding-top: 0;
+  }
+  `
   const Synopsis = styled.p`
   color: white;
   font-size: 20px;
-  padding: 5%;
+  padding-top: 2%;
   margin: 0;
   `

@@ -21,7 +21,7 @@ const NavbarBigScreen = () => {
 
   return (
     <NavContainerBigScreen>
-      <StyledLink to={'/home' }>REX Animation</StyledLink>
+      <StyledLink to={'/' }>REX Animation</StyledLink>
       <StyledLink to={'/movies'}>Movies</StyledLink>
       <StyledLink to={'/programme'}>Programme</StyledLink>
       <StyledLink to={'/venues'}>Venues</StyledLink>

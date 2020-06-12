@@ -57,6 +57,7 @@ const MovieCard = styled.section`
 
 const MovieTitle = styled.h1`
   color: white;
+  height: 40px;
   text-align: center;
   padding-left: 2%;
   padding-right 2%;
