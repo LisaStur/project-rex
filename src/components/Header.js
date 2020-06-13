@@ -21,7 +21,7 @@ const NavbarBigScreen = () => {
 
   return (
     <NavContainerBigScreen>
-      <StyledLink to={'/' }>REX Animation</StyledLink>
+      <StyledLink to={'/home' }>REX Animation</StyledLink>
       <StyledLink to={'/movies'}>Movies</StyledLink>
       <StyledLink to={'/programme'}>Programme</StyledLink>
       <StyledLink to={'/venues'}>Venues</StyledLink>
@@ -88,6 +88,7 @@ const NavContainerBigScreen = styled.div `
 
   @media (min-width: 668px) {
     visibility: visible;
+    height: 60px;
     justify-content: space-around;
   }
 
@@ -97,19 +98,20 @@ const StyledLink = styled(NavLink)`
   color: white;
   fonst-size: 12px;
   
-
   &:hover {
-    color: black;
+    font-weight: bold;
+    transition: 0.3s;
   }
-
    &.active {
-    color: red;
+    font-weight: bold;
   }
 
- @media (min-width: 668px) {
-  font-size: 18px;
-  padding: 5px;
+  @media (min-width: 668px) {
+    font-size: 18px;
+    padding: 5px;
+
+    &.active {
+      font-size: 24px;
+    }
   }
-
-
 `

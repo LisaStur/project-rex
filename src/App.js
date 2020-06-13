@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { StartPage } from 'pages/StartPage'
+import { InfoPage } from 'pages/InfoPage'
 import { Movies } from 'pages/Movies'
 import { MovieInfo } from 'pages/MovieInfo'
 import { Programme } from 'pages/Programme'
@@ -18,6 +19,9 @@ export const App = () => {
           <Route path='/' exact>
             <StartPage />
           </Route>
+        <Route path='/home'>
+          <InfoPage />
+        </Route>
           <Route path='/movies'>
             <Movies />
           </Route>

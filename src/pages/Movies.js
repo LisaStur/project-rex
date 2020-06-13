@@ -33,6 +33,7 @@ const MoviePage = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   
   @media (min-width: 668px) {
   flex-flow: row wrap;  
@@ -47,6 +48,7 @@ const MovieCard = styled.section`
     width: 40%;
     height: auto; 
     margin: 2%;
+  }
 `
 const MovieInfoLink = styled(Link)`
   text-decoration: none;
