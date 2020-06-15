@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { Burger } from './Burger'
 import { GifHeader } from './GifHeader'
+import { Countdown } from './Countdown'
 
 const Navbar = () => {
   return (
@@ -40,9 +41,10 @@ export const Header = () => {
   return ( 
     <HeaderContainer>
       <GifHeader />
-      <Btn onClick={() => setOpen(prev => !prev) }><Burger /></Btn>
-      {open && <Navbar />}
-      <NavbarBigScreen />
+        <Countdown />
+          <Btn onClick={() => setOpen(prev => !prev)}><Burger /></Btn>
+          {open && <Navbar />}
+          <NavbarBigScreen />
     </HeaderContainer> 
   )
 } 
@@ -56,6 +58,17 @@ const HeaderContainer = styled.section`
     align-items: center;
   }
 `
+
+const CountAndNavContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+
+ @media (min-width: 668px) {
+  flex-direction: column;
+  }
+`
+
 
 const Btn = styled.button`
   background-color: transparent;
