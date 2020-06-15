@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { Burger } from './Burger'
+import { GifHeader } from './GifHeader'
 
 const Navbar = () => {
   return (
@@ -38,6 +39,7 @@ export const Header = () => {
 
   return ( 
     <HeaderContainer>
+      <GifHeader />
       <Btn onClick={() => setOpen(prev => !prev) }><Burger /></Btn>
       {open && <Navbar />}
       <NavbarBigScreen />
@@ -112,6 +114,15 @@ const StyledLink = styled(NavLink)`
 
     &.active {
       font-size: 24px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 24px;
+    padding: 5px;
+
+    &.active {
+      font-size: 30px;
     }
   }
 `
