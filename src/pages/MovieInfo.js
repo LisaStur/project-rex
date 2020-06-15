@@ -48,9 +48,9 @@ export const MovieInfo = () => {
 const InfoContainer= styled.section`
   display: flex;
   flex-direction: column;
-  margin: 5%;
+  margin: 2%;
   background-color: black; 
-  padding 5%;
+  padding 2%;
 `
 const Image = styled.img`
   width: 100%;

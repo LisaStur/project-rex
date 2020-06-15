@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import styled from 'styled-components'
 
 
 export const Countdown = () => {
@@ -22,7 +23,7 @@ export const Countdown = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      setTimeLeft(calculateTimeLeft());
+      setTimeLeft(calculateTimeLeft())
     }, 1000)
   })
 
@@ -41,9 +42,13 @@ export const Countdown = () => {
   })
 
   return (
-    <div>
+    <CountdownStyling>
       {timerComponents.length ? timerComponents : <span>Welcome to REX!</span>}
-    </div>
+    </CountdownStyling>
   )
 }
 
+const CountdownStyling = styled.div`
+  color: white;
+  font-size: 18px;
+  `

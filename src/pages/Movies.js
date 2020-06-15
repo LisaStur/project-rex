@@ -40,9 +40,9 @@ const MoviePage = styled.section`
 `
 const MovieCard = styled.section`
   background-color: black;
-  width: 90%;
+  width: 95%;
   height: auto;
-  margin: 5%;
+  margin: 2%;
 
   @media (min-width: 668px) {
     width: 40%;

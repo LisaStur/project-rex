@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link, Route } from 'react-router-dom'
 import styled from 'styled-components'
 import { Burger } from './Burger'
 import { GifHeader } from './GifHeader'
@@ -45,6 +45,11 @@ export const Header = () => {
           <Btn onClick={() => setOpen(prev => !prev)}><Burger /></Btn>
           {open && <Navbar />}
           <NavbarBigScreen />
+      <Route path='/movieinfo/:title'>
+        <BackLink to='/movies' >
+          Back to movie list
+          </BackLink>
+      </Route>
     </HeaderContainer> 
   )
 } 
@@ -69,6 +74,10 @@ const CountAndNavContainer = styled.div`
   }
 `
 
+const BackLink = styled(Link)`
+  text-decoration: none;
+  color: white;
+`
 
 const Btn = styled.button`
   background-color: transparent;
