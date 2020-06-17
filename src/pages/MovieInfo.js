@@ -11,7 +11,7 @@ export const MovieInfo = () => {
   const [statusCode, setStatusCode] = useState(200)
 
   useEffect(() => {
-    fetch(`http://localhost:8080/movies/${title}`)
+    fetch(`http://localhost:8080/movies/title/${title}`)
       .then(res => {
         setStatusCode(res.status)
         return res.json()
@@ -80,7 +80,7 @@ const InfoTitle = styled.h1`
   margin: 0;
 
   @media (min-width: 1024px) {
-    padding-left: 5%;
+    padding-left: 10%;
     padding-top: 0;
   }
   `
@@ -90,7 +90,7 @@ const MainInfo = styled.h2`
   margin: 0;
 
   @media (min-width: 1024px) {
-    padding-left: 5%;
+    padding-left: 10%;
     padding-top: 0;
   }
   `
@@ -100,7 +100,7 @@ const ProdInfo = styled.h2`
   margin: 0;
 
   @media (min-width: 1024px) {
-    padding-left: 5%;
+    padding-left: 10%;
     padding-top: 0;
   }
   `

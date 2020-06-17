@@ -42,13 +42,26 @@ export const Countdown = () => {
   })
 
   return (
-    <CountdownStyling>
+    <CountdownContainer>
       {timerComponents.length ? timerComponents : <span>Welcome to REX!</span>}
-    </CountdownStyling>
+    </CountdownContainer>
   )
 }
 
-const CountdownStyling = styled.div`
+const CountdownContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
   color: white;
+  background-color: black;
   font-size: 18px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  
+  @media (min-width: 668px) {
+     font-size: 30px;
+  }
+    @media (min-width: 1024px) {
+     font-size: 36px;
+  }
   `

@@ -25,6 +25,7 @@ export const Footer = () => {
 
   return (
     <SponsorContainer>
+      <SponsorInfo>The festival is arranged by Föreningen REX Animationsfestival, in collaboration with EUNIC Stockholm. REX 2019 was arranged with support from Stockholm stad, Region Stockholm and Swedish Film Institute. REX 2020 is arranged with support of EUNIC Global, Region Stockholm, The Swedish Film Institute and EUNIC Stockholm.</SponsorInfo>
       <Image src={eunic} alt='Eunic logo' />
       <Image src={regsthlm} alt='Region Stockholm logo' />
       <Image src={sfi} alt='Swedish Film Institute logo' />
@@ -45,11 +46,12 @@ export const Footer = () => {
       <Image src={lithuania} alt='Lithuanian Institute logo' />
       <Image src={wallonia} alt='Wallonia Brussels logo' />
     </SponsorContainer>
-   
   )
-  
 }
 
+const SponsorInfo = styled.p`
+  color: white;
+  `
 const SponsorContainer = styled.section`
   display: flex;
   flex-flow: row wrap;
@@ -57,9 +59,8 @@ const SponsorContainer = styled.section`
   justify-content: center;
 
 `
-
 const Image = styled.img`
   width: auto;
-  height: 20px;
+  height: 25px;
   padding: 2%;
 `

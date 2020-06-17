@@ -140,11 +140,11 @@ const StyledLink = styled(NavLink)`
   }
 
   @media (min-width: 1024px) {
-    font-size: 24px;
+    font-size: 30px;
     padding: 5px;
 
     &.active {
-      font-size: 30px;
+      font-size: 34px;
     }
   }
 `
