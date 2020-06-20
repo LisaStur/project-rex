@@ -19,10 +19,10 @@ export const Movies = () => {
     <MoviePage>   
       {movies.map(movie => (
         <MovieCard key={movie.title}>
-          <Link to={`/movieinfo/${movie.title}`}>
+          <MovieInfoLink to={`/movieinfo/${movie.title}`}>
             <Image src={movie.imageUrl} alt={movie.title} />
             <MovieTitle>{movie.title}</MovieTitle>
-            </Link>
+            </MovieInfoLink>
         </MovieCard>
       ))}
     </MoviePage>
@@ -50,7 +50,9 @@ const MovieCard = styled.section`
     margin: 2%;
   }
 `
-
+const MovieInfoLink= styled(Link)`
+  Text-decoration: none;
+`
 
 const Image = styled.img`
   width: 100%;
