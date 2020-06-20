@@ -3,7 +3,7 @@ import { NavLink, Link, Route } from 'react-router-dom'
 import styled from 'styled-components'
 import { Burger } from './Burger'
 import { GifHeader } from './GifHeader'
-import { Countdown } from './Countdown'
+//import { Countdown } from './Countdown'
 
 const Navbar = () => {
   return (
@@ -41,7 +41,7 @@ export const Header = () => {
   return ( 
     <HeaderContainer>
       <GifHeader />
-        <Countdown />
+     
           <Btn onClick={() => setOpen(prev => !prev)}><Burger /></Btn>
           {open && <Navbar />}
           <NavbarBigScreen />
@@ -64,7 +64,7 @@ const HeaderContainer = styled.section`
   }
 `
 
-const CountAndNavContainer = styled.div`
+/*const CountAndNavContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -72,7 +72,7 @@ const CountAndNavContainer = styled.div`
  @media (min-width: 668px) {
   flex-direction: column;
   }
-`
+`*/
 
 const BackLink = styled(Link)`
   text-decoration: none;

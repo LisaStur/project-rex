@@ -3,6 +3,16 @@ import React from 'react'
 export const Programme = () => {
 
   return (
-    <h1>Programme</h1>
+    <>
+      <div>
+        <p></p>13:00 First Screening
+        15:00 Second Screening
+      </div>
+      <div>
+        13:00 First Screening
+        15:00 Second Screening
+    </div>
+    </>
+    
   )
 }
