@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams, Link, useHistory } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 //import { BackIcon } from '../components/BackIcon'
 //import '../style/movieInfo.css'
@@ -11,7 +11,7 @@ export const MovieInfo = () => {
   const [statusCode, setStatusCode] = useState(200)
 
   useEffect(() => {
-    fetch(`http://localhost:8080/movies/title/${title}`)
+    fetch(`http://localhost:8080/movies/${title}`)
       .then(res => {
         setStatusCode(res.status)
         return res.json()
