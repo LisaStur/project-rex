@@ -41,7 +41,6 @@ export const Header = () => {
   return ( 
     <HeaderContainer>
       <GifHeader />
-     
           <Btn onClick={() => setOpen(prev => !prev)}><Burger /></Btn>
           {open && <Navbar />}
           <NavbarBigScreen />

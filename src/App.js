@@ -11,6 +11,7 @@ import { Awards } from 'pages/Awards'
 import { AboutPage } from 'pages/AboutPage'
 import { Header } from 'components/Header'
 import { Footer } from 'components/Footer'
+import { Sections } from 'pages/Sections'
 
 export const App = () => {
   return (
@@ -31,6 +32,9 @@ export const App = () => {
           </Route>
           <Route path='/programme'>
             <Programme />
+          </Route>
+          <Route path='/programmeinfo/:section'>
+            <Sections />
           </Route>
           <Route path='/venues'>
             <Venues />
