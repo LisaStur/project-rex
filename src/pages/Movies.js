@@ -2,9 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { moviesReducer } from 'reducers/moviesReducer'
-
-const MOVIES_URL = 'https://rex-database2019.herokuapp.com/movies'
+import { fetchMovies } from 'reducers/moviesReducer'
 
 export const Movies = () => {
   const dispatch = useDispatch()
@@ -14,9 +12,7 @@ export const Movies = () => {
     if (movies.length > 0) {
       return
     }
-    fetch(MOVIES_URL)
-      .then(res => res.json())
-      .then(json => dispatch(moviesReducer.actions.setMovies(json)))
+    dispatch(fetchMovies())
   }, [dispatch, movies.length])
 
   return (

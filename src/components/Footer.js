@@ -51,6 +51,7 @@ export const Footer = () => {
 
 const SponsorInfo = styled.p`
   color: white;
+  width: 95%;
   `
 const SponsorContainer = styled.section`
   display: flex;

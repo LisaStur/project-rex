@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import gifR2 from '../assets/gifR2.gif'
-import gifE2 from '../assets/gifE2.gif'
+import gifE from '../assets/gifE.gif'
 import gifX2 from '../assets/gifX2.gif'
 
 export const GifHeader = () => {
   return (
     <GifContainer>
       <Image src={gifR2} alt='animated R' />
-      <BigImage src={gifE2} alt='animated E' />
+      <BigImage src={gifE} alt='animated E' />
       <Image src={gifX2} alt='animated X' />
     </GifContainer>
     
@@ -18,6 +18,7 @@ export const GifHeader = () => {
 const GifContainer = styled.section`
 display: flex;
 flex-direction: row;
+background-color: black;
 `
 const Image = styled.img`
   width: 25%;

@@ -21,3 +21,27 @@ export const moviesReducer = createSlice({
     }
   }
 })
+
+export const fetchMovies = () => {
+  return (dispatch) => {
+    fetch(`https://rex-database2019.herokuapp.com/movies`)
+      .then(res => res.json())
+      .then(json => dispatch(moviesReducer.actions.setMovies(json)))
+  }
+}
+
+export const fetchMovie = (title) => {
+  return (dispatch) => {
+    fetch(`https://rex-database2019.herokuapp.com/movies/${title}`)
+      .then(res => res.json())
+      .then(json => dispatch(moviesReducer.actions.setMovie({ title, movieInfo: json })))
+  }
+}
+
+export const fetchSection = (section) => {
+  return (dispatch) => {
+    fetch(`https://rex-database2019.herokuapp.com/section/${section}`)
+      .then(res => res.json())
+      .then(json => dispatch(moviesReducer.actions.setSection({section, movieInfo: json})))
+  }
+}

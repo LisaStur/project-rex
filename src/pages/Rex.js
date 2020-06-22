@@ -11,7 +11,6 @@ import { Awards } from 'pages/Awards'
 import { AboutPage } from 'pages/AboutPage'
 import { Header } from 'components/Header'
 import { Footer } from 'components/Footer'
-//import { Sections } from 'pages/Sections'
 
 export const Rex = () => {
 
@@ -52,7 +51,4 @@ export const Rex = () => {
   )
 }
 
-/*
-<Route path='/programmeinfo/:section'>
-  <Sections />
-</Route> */
+
