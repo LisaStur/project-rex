@@ -1,29 +1,37 @@
-import React, { useState, useEffect } from 'react'
-import { useParams, useHistory } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
+import { moviesReducer } from 'reducers/moviesReducer'
 //import { BackIcon } from '../components/BackIcon'
 //import '../style/movieInfo.css'
 
 export const MovieInfo = () => {
   const { title } = useParams()
-  const history = useHistory()
-  const [info, setInfo] = useState()
-  const [statusCode, setStatusCode] = useState(200)
+  const dispatch = useDispatch()
+  const info = useSelector(store => store.reducer.movieDetails[title])
+  //const history = useHistory()
+  //const [statusCode, setStatusCode] = useState(200)
 
   useEffect(() => {
-    fetch(`http://localhost:8080/movies/${title}`)
+
+    if (info) {
+      return
+    }
+
+    fetch(`https://rex-database2019.herokuapp.com/movies/${title}`)
       .then(res => {
-        setStatusCode(res.status)
+        //setStatusCode(res.status)
         return res.json()
       })
-      .then(json => setInfo(json))
-  }, [title])
-
+      .then(json => dispatch(moviesReducer.actions.setMovie({title, movieInfo: json})))
+  }, [title, dispatch, info])
+/*
   useEffect(() => {
     if (statusCode !== 200) {
       history.push('/')
     }
-  }, [history, statusCode])
+  }, [history, statusCode]) */
 
   if (!info) {
     return <></>;

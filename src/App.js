@@ -1,55 +1,21 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import { StartPage } from 'pages/StartPage'
-import { InfoPage } from 'pages/InfoPage'
-import { Movies } from 'pages/Movies'
-import { MovieInfo } from 'pages/MovieInfo'
-import { Programme } from 'pages/Programme'
-import { Venues } from 'pages/Venues'
-import { Skolbio } from 'pages/Skolbio'
-import { Awards } from 'pages/Awards'
-import { AboutPage } from 'pages/AboutPage'
-import { Header } from 'components/Header'
-import { Footer } from 'components/Footer'
-import { Sections } from 'pages/Sections'
+import { Provider } from 'react-redux'
+import { createStore, combineReducers } from 'redux'
+import { moviesReducer } from 'reducers/moviesReducer'
+import { Rex } from 'pages/Rex'
 
-export const App = () => {
+
+const reducers = combineReducers(moviesReducer)
+const store = createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
+export const App = () => {  
+
   return (
-      <BrowserRouter>
-        <Header />
-        <Switch>
-          <Route path='/' exact>
-            <StartPage />
-          </Route>
-        <Route path='/home'>
-          <InfoPage />
-        </Route>
-          <Route path='/movies'>
-            <Movies />
-          </Route>
-          <Route path='/movieinfo/:title'>
-            <MovieInfo />
-          </Route>
-          <Route path='/programme'>
-            <Programme />
-          </Route>
-          <Route path='/programmeinfo/:section'>
-            <Sections />
-          </Route>
-          <Route path='/venues'>
-            <Venues />
-          </Route>
-          <Route path='/skolbio'>
-            <Skolbio />
-          </Route>
-          <Route path='/awards'>
-            <Awards />
-          </Route>
-          <Route path='/aboutpage'>
-            <AboutPage />
-          </Route>
-        </Switch>
-        <Footer />
-      </BrowserRouter>
+    <Provider store={store}>
+      <Rex />
+    </Provider>
+    
+    
+ 
   )
 }

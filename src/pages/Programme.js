@@ -5,10 +5,12 @@ import { Link } from 'react-router-dom'
 export const Programme = () => {
 
   return (
-      <ProgrammeContainer>
-        <DayContainer>
+    <ProgrammeContainer>
+      <DayContainer>
         <h3>Thursday</h3>
-        <Link to={`/programmeinfo/:section`}>Link to Sections</Link>
+        <SectionLink to={`/programmeinfo/kids`}>
+          Link to Sections
+        </SectionLink>
       </DayContainer>
       <DayContainer>
         <h3>Friday</h3>
@@ -33,4 +35,13 @@ const ProgrammeContainer = styled.section`
 const DayContainer = styled.section`
   display: flex;
   flex-direction: column;
+`
+
+const SectionLink = styled(Link)`
+  display: flex;
+  text-decoration: none;
+  height: 50px;
+  background-color: black;
+  color: white;
+  padding: 10px;
 `

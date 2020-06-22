@@ -1,19 +1,23 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { moviesReducer } from 'reducers/moviesReducer'
 
-const MOVIES_URL = 'http://localhost:8080/movies'
+const MOVIES_URL = 'https://rex-database2019.herokuapp.com/movies'
 
 export const Movies = () => {
-  const [movies, setMovies]= useState([])
+  const dispatch = useDispatch()
+  const movies = useSelector(store => store.reducer.all)
 
   useEffect(() => {
+    if (movies.length > 0) {
+      return
+    }
     fetch(MOVIES_URL)
       .then(res => res.json())
-      .then(json => {
-        setMovies(json)
-      })
-  }, [])
+      .then(json => dispatch(moviesReducer.actions.setMovies(json)))
+  }, [dispatch, movies.length])
 
   return (
     <MoviePage>   
