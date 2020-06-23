@@ -11,8 +11,7 @@ const Navbar = () => {
       <StyledLink to={'/home'}>REX Animation</StyledLink>
       <StyledLink to={'/movies'}>Movies</StyledLink>
       <StyledLink to={'/programme'}>Programme</StyledLink>
-      <StyledLink to={'/venues'}>Venues</StyledLink>
-      <StyledLink to={'/skolbio'}>Skolbio</StyledLink>
+      <StyledLink to={'/rexkids'}>REX Kids</StyledLink>
       <StyledLink to={'/awards'}>Awards</StyledLink>
       <StyledLink to={'/aboutpage'}>About Rex</StyledLink>
     </NavContainer>
@@ -26,7 +25,6 @@ const NavbarBigScreen = () => {
       <StyledLink to={'/home' }>REX Animation</StyledLink>
       <StyledLink to={'/movies'}>Movies</StyledLink>
       <StyledLink to={'/programme'}>Programme</StyledLink>
-      <StyledLink to={'/venues'}>Venues</StyledLink>
       <StyledLink to={'/rexkids'}>REX Kids</StyledLink>
       <StyledLink to={'/awards'}>Awards</StyledLink>
       <StyledLink to={'/aboutpage'}>About Rex</StyledLink>
@@ -130,7 +128,7 @@ const StyledLink = styled(NavLink)`
   }
 
   @media (min-width: 668px) {
-    font-size: 18px;
+    font-size: 20px;
     padding: 5px;
 
     &.active {

@@ -8,7 +8,10 @@ export const StartPage = () => {
 
   return (
     <StartContainer>
-      <WelcomeHeader>REX is back for its 6th year!</WelcomeHeader>
+      <HeaderContainer>
+        <WelcomeHeader>REX is back for its 6th year! </WelcomeHeader>
+        <WelcomeDates>Stockholm 29th of Octber - 1st of November 2020</WelcomeDates>
+      </HeaderContainer>
       <WelcomeContainer>
         <WelcomeText>
           As usual we will continue to bring the most exciting European animation to Stockholm. Dates for the main festival are October 29-November 1 and our main venue will again be beautiful Zita Folkets Bio! The festival presents animated shorts and feature films from Europe and also includes a rich program of workshops, talks, and the Rex Animation Student Award, an annual award for Swedish student productions. And yes, we also have a section dedicated to kids!
@@ -31,11 +34,19 @@ const StartContainer = styled.section`
   flex-direction: column;
   margin: 5%;
 `
+const HeaderContainer = styled.div`
+  display: flex;
+  flex-direction: column;  
+` 
 const WelcomeHeader = styled.h1`
-  font-size: 30px;
+  font-size: 36px;
+  color: white;
+  margin: 0;    
+`
+const WelcomeDates = styled.h2`
+  font-size:20px;
   color: white;
 `
-
 const WelcomeContainer = styled.section`
   display: flex;
   flex-direction: row;

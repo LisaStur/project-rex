@@ -90,6 +90,7 @@ const WinnerImage = styled.img`
 const AwardInfo = styled.div`
   background-color: black;
   color: white;
+  font-size: 18px;
   width: 88%;
   padding: 5%;
  

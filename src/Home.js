@@ -16,7 +16,6 @@ import { Sensibilities } from 'pages/sections/Sensibilities'
 import { Guests } from 'pages/sections/Guests'
 import { DeadMan } from 'pages/sections/DeadMan'
 import { Bunuel } from 'pages/sections/Bunuel'
-import { Venues } from 'pages/Venues'
 import { RexKids } from 'pages/RexKids'
 import { Awards } from 'pages/Awards'
 import { AboutPage } from 'pages/AboutPage'
@@ -76,9 +75,6 @@ export const Home = () => {
         </Route>
         <Route path='/programme'>
           <Programme />
-        </Route>
-        <Route path='/venues'>
-          <Venues />
         </Route>
         <Route path='/rexkids'>
           <RexKids />
