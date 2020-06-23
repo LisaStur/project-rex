@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import gifE from '../assets/gifE.gif'
+import gifE2 from '../assets/gifE2.gif'
 
 export const RexE = () => { 
   return (
 
-    <Image src= {gifE} alt='animated E'/>
+    <Image src= {gifE2} alt='animated E'/>
 )
 }
 

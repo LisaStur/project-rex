@@ -5,6 +5,7 @@ import { InfoPage } from 'pages/InfoPage'
 import { Movies } from 'pages/Movies'
 import { MovieInfo } from 'pages/MovieInfo'
 import { Programme } from 'pages/Programme'
+import { Memories } from 'pages/Memories'
 import { Venues } from 'pages/Venues'
 import { Skolbio } from 'pages/Skolbio'
 import { Awards } from 'pages/Awards'
@@ -23,6 +24,9 @@ export const Rex = () => {
         </Route>
         <Route path='/home'>
           <InfoPage />
+        </Route>
+        <Route path='/memories'>
+          <Memories />
         </Route>
         <Route path='/movies'>
           <Movies />

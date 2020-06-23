@@ -17,7 +17,7 @@ export const moviesReducer = createSlice({
     },
     setSection: (state, action) => {
       const { section, sectionInfo } = action.payload
-      state.sectionDetails[section] = sectionInfo
+      state.sectionMovies[section] = sectionInfo
     }
   }
 })
@@ -35,6 +35,14 @@ export const fetchMovie = (title) => {
     fetch(`https://rex-database2019.herokuapp.com/movies/${title}`)
       .then(res => res.json())
       .then(json => dispatch(moviesReducer.actions.setMovie({ title, movieInfo: json })))
+  }
+}
+
+export const fetchMemories = (section) => {
+  return (dispatch) => {
+    fetch(`https://rex-database2019.herokuapp.com/section/memories`)
+      .then(res => res.json())
+      .then(json => dispatch(moviesReducer.actions.setMemories({ section, movieInfo: json })))
   }
 }
 

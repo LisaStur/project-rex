@@ -51,16 +51,16 @@ const Image = styled.img`
   width: 100%;
   height: auto;
 
-  @media (min-width: 1024px) {
-    width: auto;
-    height: 300px;
+  @media (min-width: 668px) {
+    width: 50%;
+    height: auto;
   }
   `
 const BigScreenContainer = styled.section`
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 668px) {
     flex-direction: row;
   }
 `
@@ -74,7 +74,7 @@ const InfoTitle = styled.h1`
   padding-top: 5%;
   margin: 0;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 668px) {
     padding-left: 10%;
     padding-top: 0;
   }
@@ -84,7 +84,7 @@ const MainInfo = styled.h2`
   font-size: 24px;
   margin: 0;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 668px) {
     padding-left: 10%;
     padding-top: 0;
   }
@@ -94,7 +94,7 @@ const ProdInfo = styled.h2`
   font-size: 20px;
   margin: 0;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 668px) {
     padding-left: 10%;
     padding-top: 0;
   }
