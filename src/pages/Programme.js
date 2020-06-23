@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom' 
+import { Link } from 'react-router-dom'
 
 export const Programme = () => {
 
@@ -8,129 +8,134 @@ export const Programme = () => {
     <ProgrammeContainer>
       <DayContainer>
         <DayHeader>Thursday 29/10</DayHeader> 
-        <ProgrammePoint>
+        <ProgrammePoint to={`/rexkids`}>
           <PointTitle>15:00 REX at LAVA</PointTitle>
           <PointInfo>Gametrailer, Games and 3D/CG Animation (age 14-25)</PointInfo>
-          <VenueLink href='https://kulturhusetstadsteatern.se/Bibliotek/Lava_Bibliotek_Verkstad/' target='blank'>Lava</VenueLink>
+          <VenueLink >Lava</VenueLink>
         </ProgrammePoint>
         <ProgrammePoint to={`/memories`}>
           <PointTitle>18:00 Memories</PointTitle>
           <PointInfo>Shortfilm block (15+)</PointInfo>
-          <VenueLink href='https://zita.se/' target='blank'>Zita 2</VenueLink>
+          <VenueLink>Zita 2</VenueLink>
         </ProgrammePoint>
-        <ProgrammePoint>
+        <ProgrammePoint to={`/stopmotions`}>
           <PointTitle>19:30 Stop Motion</PointTitle>
           <PointInfo>Shortfilm block (15+)</PointInfo>
-          <VenueLink href='https://zita.se/' target='blank'>Zita 2</VenueLink>
+          <VenueLink>Zita 2</VenueLink>
         </ProgrammePoint>
-        <ProgrammePoint>
+        <ProgrammePoint to={`/halloween`}>
           <PointTitle>21:00 Halloween</PointTitle>
           <PointInfo>Shortfilm block (15+)</PointInfo>
-          <VenueLink href='https://zita.se/' target='blank'>Zita 1</VenueLink>
+          <VenueLink>Zita 1</VenueLink>
         </ProgrammePoint>
       </DayContainer>
       <DayContainer>
         <DayHeader>Friday 30/10</DayHeader>
-        <ProgrammePoint>
-          <PointTitle>15:00 REX at LAVA</PointTitle>
+        <ProgrammePoint to={`/rexkids`}>
+          <PointTitle >15:00 REX at LAVA</PointTitle>
           <PointInfo>Gametrailer, Games and 3D/CG Animation (age 14-25)</PointInfo>
-          <VenueLink href='https://kulturhusetstadsteatern.se/Bibliotek/Lava_Bibliotek_Verkstad/' target='blank'>Lava</VenueLink>
+          <VenueLink>Lava</VenueLink>
         </ProgrammePoint>
-        <ProgrammePoint>
+        <ProgrammePoint to={`/rexkids`}>
           <PointTitle>17:00 REX at LAVA</PointTitle>
           <PointInfo>Meet director, Jenny Jokela (age 14-25)</PointInfo>
           <VenueLink href='https://kulturhusetstadsteatern.se/Bibliotek/Lava_Bibliotek_Verkstad/' target='blank'>Lava</VenueLink>
         </ProgrammePoint>
-        <ProgrammePoint>
+        <ProgrammePoint to={`/realities`}>
           <PointTitle>17:00 Realities</PointTitle>
           <PointInfo>Shortfilm block (15+)</PointInfo>
-          <VenueLink href='https://zita.se/' target='blank'>Zita 2</VenueLink>
+          <VenueLink>Zita 2</VenueLink>
         </ProgrammePoint>
-        <ProgrammePoint>
+        <ProgrammePoint to={`/families`}>
           <PointTitle>19:00 Families</PointTitle>
           <PointInfo>Shortfilm block (15+)</PointInfo>
-          <VenueLink href='https://zita.se/' target='blank'>Zita 2</VenueLink>
+          <VenueLink>Zita 2</VenueLink>
         </ProgrammePoint>
-        <ProgrammePoint>
+        <ProgrammePoint to={`/dependencies`}>
           <PointTitle>20:30 Dependencies</PointTitle>
           <PointInfo>Shortfilm block (15+)</PointInfo>
-          <VenueLink href='https://zita.se/' target='blank'>Zita 2</VenueLink>
+          <VenueLink>Zita 2</VenueLink>
         </ProgrammePoint>
       </DayContainer>
       <DayContainer>
         <DayHeader>Saturday 31/10</DayHeader>
-        <ProgrammePoint>
+        <ProgrammePoint to={`/kids`}>
           <PointTitle>11:00 REX for Kids</PointTitle>
           <PointInfo>Shortfilm block (for all ages)</PointInfo>
-          <VenueLink href='https://zita.se/' target='blank'>Zita 2</VenueLink>
+          <VenueLink>Zita 2</VenueLink>
         </ProgrammePoint>
-        <ProgrammePoint>
+        <ProgrammePoint to={`/rexkids`}>
           <PointTitle>11:30 REX for Kids</PointTitle>
           <PointInfo>Zoetrope Workshop (for all ages)</PointInfo>
-          <VenueLink href='https://zita.se/' target='blank'>Zita</VenueLink>
+          <VenueLink>Zita</VenueLink>
         </ProgrammePoint>
-        <ProgrammePoint>
+        <ProgrammePoint to={`/sensibilities`}>
           <PointTitle>12:00 Sensibilities</PointTitle>
           <PointInfo>Shortfilm block (15+)</PointInfo>
-          <VenueLink href='https://zita.se/' target='blank'>Zita 2</VenueLink>
+          <VenueLink>Zita 2</VenueLink>
         </ProgrammePoint>
-        <ProgrammePoint>
+        <ProgrammePoint to={`/guests`}>
           <PointTitle>13:45 TAFF &amp; Tricky Women</PointTitle>
           <PointInfo>Shortfilm guest blocks (15+)</PointInfo>
-          <VenueLink href='https://zita.se/' target='blank'>Zita 2</VenueLink>
+          <VenueLink>Zita 2</VenueLink>
         </ProgrammePoint>
-        <ProgrammePoint>
+        <ProgrammePoint to={`/deadman`}>
           <PointTitle>14:30 A Man is Dead</PointTitle>
           <PointInfo>Feature Film (11+)</PointInfo>
-          <VenueLink href='https://www.capitolbio.se/' target='blank'>Capitol</VenueLink>
+          <VenueLink>Capitol</VenueLink>
         </ProgrammePoint>
         <ProgrammePoint to={`/memories`}>
           <PointTitle>16:00 Memories</PointTitle>
           <PointInfo>Shortfilm guest blocks (15+)</PointInfo>
-          <VenueLink href='https://zita.se/' target='blank'>Zita 2</VenueLink>
+          <VenueLink>Zita 2</VenueLink>
         </ProgrammePoint>
-        <ProgrammePoint>
+        <ProgrammePoint to={`/realities`}>
           <PointTitle>17:30 Realities</PointTitle>
           <PointInfo>Shortfilm guest blocks and Q&amp;A (15+)</PointInfo>
-          <VenueLink href='https://zita.se/' target='blank'>Zita 2</VenueLink>
+          <VenueLink>Zita 2</VenueLink>
+        </ProgrammePoint>
+        <ProgrammePoint to={`/bunuel`}>
+          <PointTitle>20:00 Buñuel in the Labyrinth of the Turtles</PointTitle>
+          <PointInfo>Feature Film (15+)</PointInfo>
+          <VenueLink>Zita 1</VenueLink>
         </ProgrammePoint>
       </DayContainer>
       <DayContainer>
         <DayHeader>Sunday 1/11</DayHeader>
-        <ProgrammePoint>
+        <ProgrammePoint to={`/kids`}>
           <PointTitle>11:00 REX for Kids</PointTitle>
           <PointInfo>Shortfilm block (for all ages)</PointInfo>
-          <VenueLink href='https://zita.se/' target='blank'>Zita 2</VenueLink>
+          <VenueLink>Zita 2</VenueLink>
         </ProgrammePoint>
-        <ProgrammePoint>
+        <ProgrammePoint to={`/rexkids`}>
           <PointTitle>11:30 REX for Kids</PointTitle>
           <PointInfo>Stop Motion Workshop (for all ages)</PointInfo>
-          <VenueLink href='https://zita.se/' target='blank'>Zita</VenueLink>
+          <VenueLink>Zita</VenueLink>
         </ProgrammePoint>
-        <ProgrammePoint>
+        <ProgrammePoint to={`/dependencies`}>
           <PointTitle>12:00 Dependencies</PointTitle>
           <PointInfo>Shortfilm Block and Q&amp;A (15+)</PointInfo>
-          <VenueLink href='https://zita.se/' target='blank'>Zita 2</VenueLink>
+          <VenueLink>Zita 2</VenueLink>
         </ProgrammePoint>
-        <ProgrammePoint>
+        <ProgrammePoint to={`/families`}>
           <PointTitle>15:15 Families</PointTitle>
           <PointInfo>Shortfilm block (15+)</PointInfo>
-          <VenueLink href='https://zita.se/' target='blank'>Zita 2</VenueLink>
+          <VenueLink>Zita 2</VenueLink>
         </ProgrammePoint>
-        <ProgrammePoint>
+        <ProgrammePoint to={`/sensibilities`}>
           <PointTitle>17:00 Sensibilities</PointTitle>
           <PointInfo>Shortfilm block and Q&and;A (15+)</PointInfo>
-          <VenueLink href='https://zita.se/' target='blank'>Zita 2</VenueLink>
+          <VenueLink>Zita 2</VenueLink>
         </ProgrammePoint>
-        <ProgrammePoint>
+        <ProgrammePoint to={`/stopmotions`}>
           <PointTitle>18:15 Stop Motion</PointTitle>
           <PointInfo>Shortfilm block (15+)</PointInfo>
-          <VenueLink href='https://zita.se/' target='blank'>Zita 2</VenueLink>
+          <VenueLink>Zita 2</VenueLink>
         </ProgrammePoint>
-        <ProgrammePoint>
+        <ProgrammePoint to={`/awards`}>
           <PointTitle>20:00 REX Animation Student Award</PointTitle>
           <PointInfo>The award nominations and Award Ceremony</PointInfo>
-          <VenueLink href='https://zita.se/' target='blank'>Zita 1</VenueLink>
+          <VenueLink>Zita 1</VenueLink>
         </ProgrammePoint>
       </DayContainer>
     </ProgrammeContainer>
@@ -183,7 +188,7 @@ const PointTitle = styled.h4`
 const PointInfo = styled.p`
  
 `
-const VenueLink = styled.a`
+const VenueLink = styled.p`
   color: white;
   text-decoration: none;
   font-weight: bold;

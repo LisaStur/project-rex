@@ -1,36 +1,36 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
-export const Memories = () => {
-  const [memories, setMemories] = useState([])
+export const StopMotions = () => {
+  const [stopMotions, setStopMotions] = useState([])
 
   useEffect(() => {
-    fetch('https://rex-database2019.herokuapp.com/section/memories')
-    .then((res) => {
-      return res.json()
-    })
-    .then(data => {
-      setMemories(data)
-    })
-  },[])
+    fetch('https://rex-database2019.herokuapp.com/section/stopmotion')
+      .then((res) => {
+        return res.json()
+      })
+      .then(data => {
+        setStopMotions(data)
+      })
+  }, [])
 
   return (
     <SectionPage>
       <HeaderSection>
-        <SectionHeader>Memories</SectionHeader>
-        <SectionPitch>Grumpy cats sick of life, stuffy metropolitans, film noir pastiche, memories of love and childhood. People being alone together – 5 short animated films that you won’t forget anytime soon.</SectionPitch>
-        <SectionSreenings>Thursday 18:00 Zita 2</SectionSreenings>
-        <SectionSreenings>Saturday 16:00 Zita 2</SectionSreenings>
+        <SectionHeader>Stop Motion</SectionHeader>
+        <SectionPitch>REX highlights the beauty and variety of stop motion with 6 short films. From dark comedy to experimental, from the conditions for people in a totalitarian state to beach life dilemmas. Realistic stop motion, dreamy stop motion, the common theme is a celebration of all types of stories that can be told with this animation technique.</SectionPitch>
+        <SectionSreenings>Thursday 19:30 Zita 2</SectionSreenings>
+        <SectionSreenings>Sunday 18:15 Zita 2</SectionSreenings>
       </HeaderSection>
-      {memories.map(memory => (
-        <SectionCard key={memory.title}>
-          <Image src={memory.imageUrl} alt={memory.title}/>
+      {stopMotions.map(stopMotion => (
+        <SectionCard key={stopMotion.title}>
+          <Image src={stopMotion.imageUrl} alt={stopMotion.title} />
           <InfoSection>
-            <SectionTitle>{memory.title}</SectionTitle>
-            <SectionDirector>{memory.director}</SectionDirector>
-            <SectionInfo>{memory.originalTitle}</SectionInfo>
-            <SectionInfo>{memory.country} {memory.productionYear}, {memory.duration}min</SectionInfo>
-            <SectionSynopsis>{memory.synopsis}</SectionSynopsis>
+            <SectionTitle>{stopMotion.title}</SectionTitle>
+            <SectionDirector>{stopMotion.director}</SectionDirector>
+            <SectionInfo>{stopMotion.originalTitle}</SectionInfo>
+            <SectionInfo>{stopMotion.country} {stopMotion.productionYear}, {stopMotion.duration}min</SectionInfo>
+            <SectionSynopsis>{stopMotion.synopsis}</SectionSynopsis>
           </InfoSection>
         </SectionCard>
       ))}
@@ -59,7 +59,7 @@ const SectionPitch = styled.p`
   color: white;
   font-size: 20px;
   padding: 0 2% 0 2%;
-`
+  `
 const SectionSreenings = styled.p`
   color: white;
   font-size: 20px;

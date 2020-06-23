@@ -1,36 +1,36 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
-export const Memories = () => {
-  const [memories, setMemories] = useState([])
+export const Kids = () => {
+  const [kids, setKids] = useState([])
 
   useEffect(() => {
-    fetch('https://rex-database2019.herokuapp.com/section/memories')
-    .then((res) => {
-      return res.json()
-    })
-    .then(data => {
-      setMemories(data)
-    })
-  },[])
+    fetch('https://rex-database2019.herokuapp.com/section/kids')
+      .then((res) => {
+        return res.json()
+      })
+      .then(data => {
+        setKids(data)
+      })
+  }, [])
 
   return (
     <SectionPage>
       <HeaderSection>
-        <SectionHeader>Memories</SectionHeader>
-        <SectionPitch>Grumpy cats sick of life, stuffy metropolitans, film noir pastiche, memories of love and childhood. People being alone together – 5 short animated films that you won’t forget anytime soon.</SectionPitch>
-        <SectionSreenings>Thursday 18:00 Zita 2</SectionSreenings>
-        <SectionSreenings>Saturday 16:00 Zita 2</SectionSreenings>
+        <SectionHeader>REX for Kids</SectionHeader>
+        <SectionPitch>To our youngest audience (age 4 and up) we offer six films showcasing a variety of techniques and stories. In this block, toys come alive and sporty animals are up for competition. After loss and winter, there will always be a spring. Join a bird with an urge to dance or team up with a dachshund whose limbs are disagreeing over the way forward.</SectionPitch>
+        <SectionSreenings>Saturday 11:00 Zita 2</SectionSreenings>
+        <SectionSreenings>Sunday 11:00 Zita 2</SectionSreenings>
       </HeaderSection>
-      {memories.map(memory => (
-        <SectionCard key={memory.title}>
-          <Image src={memory.imageUrl} alt={memory.title}/>
+      {kids.map(kid => (
+        <SectionCard key={kid.title}>
+          <Image src={kid.imageUrl} alt={kid.title} />
           <InfoSection>
-            <SectionTitle>{memory.title}</SectionTitle>
-            <SectionDirector>{memory.director}</SectionDirector>
-            <SectionInfo>{memory.originalTitle}</SectionInfo>
-            <SectionInfo>{memory.country} {memory.productionYear}, {memory.duration}min</SectionInfo>
-            <SectionSynopsis>{memory.synopsis}</SectionSynopsis>
+            <SectionTitle>{kid.title}</SectionTitle>
+            <SectionDirector>{kid.director}</SectionDirector>
+            <SectionInfo>{kid.originalTitle}</SectionInfo>
+            <SectionInfo>{kid.country} {kid.productionYear}, {kid.duration}min</SectionInfo>
+            <SectionSynopsis>{kid.synopsis}</SectionSynopsis>
           </InfoSection>
         </SectionCard>
       ))}

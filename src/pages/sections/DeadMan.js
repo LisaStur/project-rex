@@ -1,36 +1,35 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
-export const Memories = () => {
-  const [memories, setMemories] = useState([])
+export const DeadMan = () => {
+  const [deadMen, setDeadMen] = useState([])
 
   useEffect(() => {
-    fetch('https://rex-database2019.herokuapp.com/section/memories')
-    .then((res) => {
-      return res.json()
-    })
-    .then(data => {
-      setMemories(data)
-    })
-  },[])
+    fetch('https://rex-database2019.herokuapp.com/section/featureman')
+      .then((res) => {
+        return res.json()
+      })
+      .then(data => {
+        setDeadMen(data)
+      })
+  }, [])
 
   return (
     <SectionPage>
       <HeaderSection>
-        <SectionHeader>Memories</SectionHeader>
-        <SectionPitch>Grumpy cats sick of life, stuffy metropolitans, film noir pastiche, memories of love and childhood. People being alone together – 5 short animated films that you won’t forget anytime soon.</SectionPitch>
-        <SectionSreenings>Thursday 18:00 Zita 2</SectionSreenings>
-        <SectionSreenings>Saturday 16:00 Zita 2</SectionSreenings>
+        <SectionHeader>A Man is Dead</SectionHeader>
+        <SectionPitch>One of this years' two animated features, showing on gala venue Capitol.</SectionPitch>
+        <SectionSreenings>Saturday 14:30 Capitol</SectionSreenings>
       </HeaderSection>
-      {memories.map(memory => (
-        <SectionCard key={memory.title}>
-          <Image src={memory.imageUrl} alt={memory.title}/>
+      {deadMen.map(deadMan => (
+        <SectionCard key={deadMan.title}>
+          <Image src={deadMan.imageUrl} alt={deadMan.title} />
           <InfoSection>
-            <SectionTitle>{memory.title}</SectionTitle>
-            <SectionDirector>{memory.director}</SectionDirector>
-            <SectionInfo>{memory.originalTitle}</SectionInfo>
-            <SectionInfo>{memory.country} {memory.productionYear}, {memory.duration}min</SectionInfo>
-            <SectionSynopsis>{memory.synopsis}</SectionSynopsis>
+            <SectionTitle>{deadMan.title}</SectionTitle>
+            <SectionDirector>{deadMan.director}</SectionDirector>
+            <SectionInfo>{deadMan.originalTitle}</SectionInfo>
+            <SectionInfo>{deadMan.country} {deadMan.productionYear}, {deadMan.duration}min</SectionInfo>
+            <SectionSynopsis>{deadMan.synopsis}</SectionSynopsis>
           </InfoSection>
         </SectionCard>
       ))}

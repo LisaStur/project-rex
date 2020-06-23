@@ -1,36 +1,36 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
-export const Memories = () => {
-  const [memories, setMemories] = useState([])
+export const Dependencies = () => {
+  const [dependencies, setDependencies] = useState([])
 
   useEffect(() => {
-    fetch('https://rex-database2019.herokuapp.com/section/memories')
-    .then((res) => {
-      return res.json()
-    })
-    .then(data => {
-      setMemories(data)
-    })
-  },[])
+    fetch('https://rex-database2019.herokuapp.com/section/dependencies')
+      .then((res) => {
+        return res.json()
+      })
+      .then(data => {
+        setDependencies(data)
+      })
+  }, [])
 
   return (
     <SectionPage>
       <HeaderSection>
-        <SectionHeader>Memories</SectionHeader>
-        <SectionPitch>Grumpy cats sick of life, stuffy metropolitans, film noir pastiche, memories of love and childhood. People being alone together – 5 short animated films that you won’t forget anytime soon.</SectionPitch>
-        <SectionSreenings>Thursday 18:00 Zita 2</SectionSreenings>
-        <SectionSreenings>Saturday 16:00 Zita 2</SectionSreenings>
+        <SectionHeader>Dependencies</SectionHeader>
+        <SectionPitch>It depends… 6 short films about relationships between couples, individuals and groups, and still and moving images. </SectionPitch>
+        <SectionSreenings>Friday 20:30 Zita 2</SectionSreenings>
+        <SectionSreenings>Sunday 12:00 Zita 2</SectionSreenings>
       </HeaderSection>
-      {memories.map(memory => (
-        <SectionCard key={memory.title}>
-          <Image src={memory.imageUrl} alt={memory.title}/>
+      {dependencies.map(dependency => (
+        <SectionCard key={dependency.title}>
+          <Image src={dependency.imageUrl} alt={dependency.title} />
           <InfoSection>
-            <SectionTitle>{memory.title}</SectionTitle>
-            <SectionDirector>{memory.director}</SectionDirector>
-            <SectionInfo>{memory.originalTitle}</SectionInfo>
-            <SectionInfo>{memory.country} {memory.productionYear}, {memory.duration}min</SectionInfo>
-            <SectionSynopsis>{memory.synopsis}</SectionSynopsis>
+            <SectionTitle>{dependency.title}</SectionTitle>
+            <SectionDirector>{dependency.director}</SectionDirector>
+            <SectionInfo>{dependency.originalTitle}</SectionInfo>
+            <SectionInfo>{dependency.country} {dependency.productionYear}, {dependency.duration}min</SectionInfo>
+            <SectionSynopsis>{dependency.synopsis}</SectionSynopsis>
           </InfoSection>
         </SectionCard>
       ))}

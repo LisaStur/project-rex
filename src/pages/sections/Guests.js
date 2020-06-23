@@ -1,36 +1,36 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
-export const Memories = () => {
-  const [memories, setMemories] = useState([])
+export const Guests = () => {
+  const [guests, setGuests] = useState([])
 
   useEffect(() => {
-    fetch('https://rex-database2019.herokuapp.com/section/memories')
-    .then((res) => {
-      return res.json()
-    })
-    .then(data => {
-      setMemories(data)
-    })
-  },[])
+    fetch('https://rex-database2019.herokuapp.com/section/guest')
+      .then((res) => {
+        return res.json()
+      })
+      .then(data => {
+        setGuests(data)
+      })
+  }, [])
 
   return (
     <SectionPage>
       <HeaderSection>
-        <SectionHeader>Memories</SectionHeader>
-        <SectionPitch>Grumpy cats sick of life, stuffy metropolitans, film noir pastiche, memories of love and childhood. People being alone together – 5 short animated films that you won’t forget anytime soon.</SectionPitch>
-        <SectionSreenings>Thursday 18:00 Zita 2</SectionSreenings>
-        <SectionSreenings>Saturday 16:00 Zita 2</SectionSreenings>
+        <SectionHeader>Guest selection: TAFF &amp; Tricky Women</SectionHeader>
+        <SectionPitch>
+          TAFF – Finnish Animation Today, presented by Kimmo Sillanmikko, Festival Director of Turku Animated Film Festival. Tricky Women, Austrian animation festival with movies by women and trans/inter only.</SectionPitch>
+        <SectionSreenings>Saturday 13:45 Zita 2</SectionSreenings>
       </HeaderSection>
-      {memories.map(memory => (
-        <SectionCard key={memory.title}>
-          <Image src={memory.imageUrl} alt={memory.title}/>
+      {guests.map(guest => (
+        <SectionCard key={guest.title}>
+          <Image src={guest.imageUrl} alt={guest.title} />
           <InfoSection>
-            <SectionTitle>{memory.title}</SectionTitle>
-            <SectionDirector>{memory.director}</SectionDirector>
-            <SectionInfo>{memory.originalTitle}</SectionInfo>
-            <SectionInfo>{memory.country} {memory.productionYear}, {memory.duration}min</SectionInfo>
-            <SectionSynopsis>{memory.synopsis}</SectionSynopsis>
+            <SectionTitle>{guest.title}</SectionTitle>
+            <SectionDirector>{guest.director}</SectionDirector>
+            <SectionInfo>{guest.originalTitle}</SectionInfo>
+            <SectionInfo>{guest.country} {guest.productionYear}, {guest.duration}min</SectionInfo>
+            <SectionSynopsis>{guest.synopsis}</SectionSynopsis>
           </InfoSection>
         </SectionCard>
       ))}

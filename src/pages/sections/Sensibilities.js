@@ -1,36 +1,36 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
-export const Memories = () => {
-  const [memories, setMemories] = useState([])
+export const Sensibilities = () => {
+  const [sensibilities, setSensibilities] = useState([])
 
   useEffect(() => {
-    fetch('https://rex-database2019.herokuapp.com/section/memories')
-    .then((res) => {
-      return res.json()
-    })
-    .then(data => {
-      setMemories(data)
-    })
-  },[])
+    fetch('https://rex-database2019.herokuapp.com/section/sensibilities')
+      .then((res) => {
+        return res.json()
+      })
+      .then(data => {
+        setSensibilities(data)
+      })
+  }, [])
 
   return (
     <SectionPage>
       <HeaderSection>
-        <SectionHeader>Memories</SectionHeader>
-        <SectionPitch>Grumpy cats sick of life, stuffy metropolitans, film noir pastiche, memories of love and childhood. People being alone together – 5 short animated films that you won’t forget anytime soon.</SectionPitch>
-        <SectionSreenings>Thursday 18:00 Zita 2</SectionSreenings>
+        <SectionHeader>Sensibilities</SectionHeader>
+        <SectionPitch>5 short animated films that are free flowing and thought provoking, with a common sensibility and stunning visual style. Experience urban tales, climate angst, mothers with Alzheimer’s and groovy pink apes!</SectionPitch>
+        <SectionSreenings>Saturday 12:00 Zita 2</SectionSreenings>
         <SectionSreenings>Saturday 16:00 Zita 2</SectionSreenings>
       </HeaderSection>
-      {memories.map(memory => (
-        <SectionCard key={memory.title}>
-          <Image src={memory.imageUrl} alt={memory.title}/>
+      {sensibilities.map(sensibility => (
+        <SectionCard key={sensibility.title}>
+          <Image src={sensibility.imageUrl} alt={sensibility.title} />
           <InfoSection>
-            <SectionTitle>{memory.title}</SectionTitle>
-            <SectionDirector>{memory.director}</SectionDirector>
-            <SectionInfo>{memory.originalTitle}</SectionInfo>
-            <SectionInfo>{memory.country} {memory.productionYear}, {memory.duration}min</SectionInfo>
-            <SectionSynopsis>{memory.synopsis}</SectionSynopsis>
+            <SectionTitle>{sensibility.title}</SectionTitle>
+            <SectionDirector>{sensibility.director}</SectionDirector>
+            <SectionInfo>{sensibility.originalTitle}</SectionInfo>
+            <SectionInfo>{sensibility.country} {sensibility.productionYear}, {sensibility.duration}min</SectionInfo>
+            <SectionSynopsis>{sensibility.synopsis}</SectionSynopsis>
           </InfoSection>
         </SectionCard>
       ))}
@@ -66,7 +66,6 @@ const SectionSreenings = styled.p`
   padding-left: 2%;
   margin: 0;
 `
-
 const SectionCard = styled.section`
   display: flex;
   flex-direction: column;

@@ -67,6 +67,7 @@ const BigScreenContainer = styled.section`
 const MainTextContainer = styled.section`
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
 `
 const InfoTitle = styled.h1`
   color: white;

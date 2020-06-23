@@ -1,36 +1,36 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
-export const Memories = () => {
-  const [memories, setMemories] = useState([])
+export const Realities = () => {
+  const [realities, setRealities] = useState([])
 
   useEffect(() => {
-    fetch('https://rex-database2019.herokuapp.com/section/memories')
-    .then((res) => {
-      return res.json()
-    })
-    .then(data => {
-      setMemories(data)
-    })
-  },[])
+    fetch('https://rex-database2019.herokuapp.com/section/realities')
+      .then((res) => {
+        return res.json()
+      })
+      .then(data => {
+        setRealities(data)
+      })
+  }, [])
 
   return (
     <SectionPage>
       <HeaderSection>
-        <SectionHeader>Memories</SectionHeader>
-        <SectionPitch>Grumpy cats sick of life, stuffy metropolitans, film noir pastiche, memories of love and childhood. People being alone together – 5 short animated films that you won’t forget anytime soon.</SectionPitch>
-        <SectionSreenings>Thursday 18:00 Zita 2</SectionSreenings>
-        <SectionSreenings>Saturday 16:00 Zita 2</SectionSreenings>
+        <SectionHeader>Realities</SectionHeader>
+        <SectionPitch>Are you ready to face reality? Check out our selection of 6 animated documentary shorts on everything from crime and blurred lines between game and reality, to handling life without the ability to recognize anyone’s face.</SectionPitch>
+        <SectionSreenings>Friday 17:00 Zita 2</SectionSreenings>
+        <SectionSreenings>Saturday 17:30 Zita 2</SectionSreenings>
       </HeaderSection>
-      {memories.map(memory => (
-        <SectionCard key={memory.title}>
-          <Image src={memory.imageUrl} alt={memory.title}/>
+      {realities.map(reality => (
+        <SectionCard key={reality.title}>
+          <Image src={reality.imageUrl} alt={reality.title} />
           <InfoSection>
-            <SectionTitle>{memory.title}</SectionTitle>
-            <SectionDirector>{memory.director}</SectionDirector>
-            <SectionInfo>{memory.originalTitle}</SectionInfo>
-            <SectionInfo>{memory.country} {memory.productionYear}, {memory.duration}min</SectionInfo>
-            <SectionSynopsis>{memory.synopsis}</SectionSynopsis>
+            <SectionTitle>{reality.title}</SectionTitle>
+            <SectionDirector>{reality.director}</SectionDirector>
+            <SectionInfo>{reality.originalTitle}</SectionInfo>
+            <SectionInfo>{reality.country} {reality.productionYear}, {reality.duration}min</SectionInfo>
+            <SectionSynopsis>{reality.synopsis}</SectionSynopsis>
           </InfoSection>
         </SectionCard>
       ))}

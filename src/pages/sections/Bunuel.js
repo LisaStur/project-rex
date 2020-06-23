@@ -1,36 +1,35 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
-export const Memories = () => {
-  const [memories, setMemories] = useState([])
+export const Bunuel = () => {
+  const [bunuels, setBunuels] = useState([])
 
   useEffect(() => {
-    fetch('https://rex-database2019.herokuapp.com/section/memories')
-    .then((res) => {
-      return res.json()
-    })
-    .then(data => {
-      setMemories(data)
-    })
-  },[])
+    fetch('https://rex-database2019.herokuapp.com/section/featurebunuel')
+      .then((res) => {
+        return res.json()
+      })
+      .then(data => {
+        setBunuels(data)
+      })
+  }, [])
 
   return (
     <SectionPage>
       <HeaderSection>
-        <SectionHeader>Memories</SectionHeader>
-        <SectionPitch>Grumpy cats sick of life, stuffy metropolitans, film noir pastiche, memories of love and childhood. People being alone together – 5 short animated films that you won’t forget anytime soon.</SectionPitch>
-        <SectionSreenings>Thursday 18:00 Zita 2</SectionSreenings>
-        <SectionSreenings>Saturday 16:00 Zita 2</SectionSreenings>
+        <SectionHeader>Buñuel in the Labyrinth of the Turtles</SectionHeader>
+        <SectionPitch>Awardwinning animated feature, biography on Buñuel and his making of Land Wihthout Bread.</SectionPitch>
+        <SectionSreenings>Saturday 14:30 Capitol</SectionSreenings>
       </HeaderSection>
-      {memories.map(memory => (
-        <SectionCard key={memory.title}>
-          <Image src={memory.imageUrl} alt={memory.title}/>
+      {bunuels.map(bunuel => (
+        <SectionCard key={bunuel.title}>
+          <Image src={bunuel.imageUrl} alt={bunuel.title} />
           <InfoSection>
-            <SectionTitle>{memory.title}</SectionTitle>
-            <SectionDirector>{memory.director}</SectionDirector>
-            <SectionInfo>{memory.originalTitle}</SectionInfo>
-            <SectionInfo>{memory.country} {memory.productionYear}, {memory.duration}min</SectionInfo>
-            <SectionSynopsis>{memory.synopsis}</SectionSynopsis>
+            <SectionTitle>{bunuel.title}</SectionTitle>
+            <SectionDirector>{bunuel.director}</SectionDirector>
+            <SectionInfo>{bunuel.originalTitle}</SectionInfo>
+            <SectionInfo>{bunuel.country} {bunuel.productionYear}, {bunuel.duration}min</SectionInfo>
+            <SectionSynopsis>{bunuel.synopsis}</SectionSynopsis>
           </InfoSection>
         </SectionCard>
       ))}
