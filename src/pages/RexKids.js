@@ -40,14 +40,27 @@ const KidsHeader = styled.h1`
 const KidsInfo = styled.p`
   color: white;  
   font-size: 20px;
-  padding-right: 10%;
+  padding-right: 5%;
 `
 const RexGifs = styled.section`
   display: flex;
   flex-direction: column;  
-  background-color: black;
+  visibility: hidden;
+  
+
+  @media (min-width: 668px) {
+    display: flex;
+    justify-content: space-around;
+    visibility: visible;
+    background-color: black;
+    height: auto;
+
 `
 const Image = styled.img`
-  width: 100%;
-  height: auto;
+  width: 0;
+  height: 0;
+
+  @media (min-width: 668px) {
+    width: 100%;
+    height: auto;
 `

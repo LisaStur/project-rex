@@ -50,21 +50,39 @@ const WelcomeDates = styled.h2`
 `
 const WelcomeContainer = styled.section`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+
+  @media (min-width: 668px) {
+    flex-direction: row;
 `
 const WelcomeText = styled.p`
   display: flex;
   font-size: 20px;
   color: white;
-  width: 200%;
   padding-right: 10%; 
+
+  @media (min-width: 668px) {
+    flex-direction: row;
 `
 const RexGifs = styled.section`
   display: flex;
   flex-direction: column;  
-  background-color: black;
+  visibility: hidden;
+  
+
+  @media (min-width: 668px) {
+    display: flex;
+    justify-content: space-around;
+    visibility: visible;
+    background-color: black;
+    height: auto;
+
 `
 const Image = styled.img`
-  width: 100%;
-  height: auto;
+  width: 0;
+  height: 0;
+
+  @media (min-width: 668px) {
+    width: 100%;
+    height: auto;
 `
