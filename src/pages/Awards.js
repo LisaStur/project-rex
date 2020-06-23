@@ -60,7 +60,6 @@ const AwardContainer = styled.section`
   display: flex;
   flex-direction: column;
   `
-
 const AwardCard = styled.div`
   display: flex;
   flex-direction: column;
@@ -79,9 +78,7 @@ const Year = styled.div`
     display: flex;
     flex-direction: row;
   }
-
 `
-
 const WinnerLogo = styled.img`
   width: 98%;
   height: auto;
@@ -97,15 +94,13 @@ const AwardInfo = styled.div`
   padding: 5%;
  
 `
-
 const WinnerInfo = styled.h1`
   background-color: black;
-  width: 98%;
+  width: 88%;
   margin: 0;
   color: white;
   font-size: 20px;
   height: auto;
   text-align: center;
-  padding-top: 3%;
-  padding-bottom: 2%;
+  padding: 3% 5% 2% 5%;
   `

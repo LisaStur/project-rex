@@ -27,7 +27,7 @@ const NavbarBigScreen = () => {
       <StyledLink to={'/movies'}>Movies</StyledLink>
       <StyledLink to={'/programme'}>Programme</StyledLink>
       <StyledLink to={'/venues'}>Venues</StyledLink>
-      <StyledLink to={'/skolbio'}>Skolbio</StyledLink>
+      <StyledLink to={'/rexkids'}>REX Kids</StyledLink>
       <StyledLink to={'/awards'}>Awards</StyledLink>
       <StyledLink to={'/aboutpage'}>About Rex</StyledLink>
     </NavContainerBigScreen>
