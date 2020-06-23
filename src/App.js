@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import { moviesReducer } from 'reducers/moviesReducer'
-import { Rex } from 'pages/Rex'
+import { Home } from './Home'
 
 const reducers = combineReducers(moviesReducer)
 
@@ -15,7 +15,7 @@ export const App = () => {
 
   return (
     <Provider store={store}>
-      <Rex />
+      <Home />
     </Provider>
     
     

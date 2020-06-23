@@ -201,7 +201,6 @@ const ProgrammeContainer = styled.section`
     flex-direction: row;
   }
 `
-
 const DayContainer = styled.section`
   display: flex;
   flex-direction: column;
@@ -236,7 +235,6 @@ const PointTitle = styled.h4`
   margin: 0;
 `
 const PointInfo = styled.p`
- 
 `
 const VenueLink = styled.a`
   color: white;
