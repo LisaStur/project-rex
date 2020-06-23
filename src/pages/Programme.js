@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-//import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom' 
 
 export const Programme = () => {
 
@@ -13,7 +13,7 @@ export const Programme = () => {
           <PointInfo>Gametrailer, Games and 3D/CG Animation (age 14-25)</PointInfo>
           <VenueLink href='https://kulturhusetstadsteatern.se/Bibliotek/Lava_Bibliotek_Verkstad/' target='blank'>Lava</VenueLink>
         </ProgrammePoint>
-        <ProgrammePoint>
+        <ProgrammePoint to={`/memories`}>
           <PointTitle>18:00 Memories</PointTitle>
           <PointInfo>Shortfilm block (15+)</PointInfo>
           <VenueLink href='https://zita.se/' target='blank'>Zita 2</VenueLink>
@@ -84,7 +84,7 @@ export const Programme = () => {
           <PointInfo>Feature Film (11+)</PointInfo>
           <VenueLink href='https://www.capitolbio.se/' target='blank'>Capitol</VenueLink>
         </ProgrammePoint>
-        <ProgrammePoint>
+        <ProgrammePoint to={`/memories`}>
           <PointTitle>16:00 Memories</PointTitle>
           <PointInfo>Shortfilm guest blocks (15+)</PointInfo>
           <VenueLink href='https://zita.se/' target='blank'>Zita 2</VenueLink>
@@ -158,12 +158,13 @@ const DayContainer = styled.section`
      width: 25%;
   }
 `
-const ProgrammePoint = styled.div`
+const ProgrammePoint = styled(Link)`
   display: flex;
   flex-direction: column;
   background-color: black;
+  color: white;
+  text-decoration: none;
   margin: 0 2% 1% 2%;
-  
   padding: 2%;
 
   @media (min-width: 668px) {
