@@ -18,7 +18,6 @@ import { DeadMan } from 'pages/sections/DeadMan'
 import { Bunuel } from 'pages/sections/Bunuel'
 import { RexKids } from 'pages/RexKids'
 import { Awards } from 'pages/Awards'
-import { AboutPage } from 'pages/AboutPage'
 import { Header } from 'components/Header'
 import { Footer } from 'components/Footer'
 
@@ -81,9 +80,6 @@ export const Home = () => {
         </Route>
         <Route path='/awards'>
           <Awards />
-        </Route>
-        <Route path='/aboutpage'>
-          <AboutPage />
         </Route>
       </Switch>
       <Footer />

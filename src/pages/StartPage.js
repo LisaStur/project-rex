@@ -21,9 +21,9 @@ export const StartPage = () => {
           <br /><br /> For the 5th year in a row, REX presents the award for best animated Swedish student production. The nominations are screened Sunday, November 1st. The winner is announced by the jury at the end of the screening. There will be a prize ceremony and a glass of bubbly for all!
         </WelcomeText>
         <RexGifs>
-          <Image src={gifR} />
-          <Image src={gifE2} />
-          <Image src={gifX} />
+          <Image src={gifR} alt='Animated R' />
+          <Image src={gifE2} alt='Animated E' />
+          <Image src={gifX} alt='Animated X' />
         </RexGifs>
       </WelcomeContainer>
     </StartContainer>

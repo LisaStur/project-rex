@@ -13,7 +13,6 @@ const Navbar = () => {
       <StyledLink to={'/programme'}>Programme</StyledLink>
       <StyledLink to={'/rexkids'}>REX Kids</StyledLink>
       <StyledLink to={'/awards'}>Awards</StyledLink>
-      <StyledLink to={'/aboutpage'}>About Rex</StyledLink>
     </NavContainer>
   )
 }
@@ -27,7 +26,7 @@ const NavbarBigScreen = () => {
       <StyledLink to={'/programme'}>Programme</StyledLink>
       <StyledLink to={'/rexkids'}>REX Kids</StyledLink>
       <StyledLink to={'/awards'}>Awards</StyledLink>
-      <StyledLink to={'/aboutpage'}>About Rex</StyledLink>
+
     </NavContainerBigScreen>
   )
 
@@ -104,13 +103,16 @@ const NavContainer = styled.div`
 `
 
 const NavContainerBigScreen = styled.div `
+  display: flex;
   visibility: hidden;
   height: 0;
 
   @media (min-width: 668px) {
+    width: 100%;
     visibility: visible;
     height: 60px;
     justify-content: space-around;
+    align-items: flex-end;
   }
 
 `
