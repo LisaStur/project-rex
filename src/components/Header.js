@@ -43,7 +43,7 @@ export const Header = () => {
           <NavbarBigScreen />
       <Route path='/movieinfo/:title'>
         <BackLink to='/movies' >
-          Back to movie list
+          ⇦ Back to movie list
           </BackLink>
       </Route>
     </HeaderContainer> 
@@ -73,6 +73,7 @@ const HeaderContainer = styled.section`
 const BackLink = styled(Link)`
   text-decoration: none;
   color: white;
+  display: flex;
 `
 
 const Btn = styled.button`

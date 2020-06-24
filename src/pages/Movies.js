@@ -53,7 +53,6 @@ const MovieCard = styled.section`
 const MovieInfoLink= styled(Link)`
   Text-decoration: none;
 `
-
 const Image = styled.img`
   width: 100%;
   height: auto;

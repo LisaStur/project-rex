@@ -11,9 +11,8 @@ export const RexKids = () => {
       <TextContainer>
         <KidsHeader>REX Kids and School Events</KidsHeader>
         <KidsInfo>
-          During autumn 2020 we offer film screenings and animation workshops to junior highschool and highschool students in Stockholm. The workshops, led by students at Animationsakademien, are taking place at the youth library Lava. REX is also planning to host ”school cinema” at Klarabiografen and Zita Folkets Bio, screening the very best of European animation.<br /><br />
-        Information on films and tickets will be released in May. If you are a teacher interested in a school screening or workshop, please get in touch on info@rexanimation.se. The main festival, offering an extensive film programme for families and adults, can be visited at Zita Folkets Bio during the autumn break 29.10 – 1.11.
-    </KidsInfo>
+          During autumn 2020 we offer film screenings and animation workshops to junior highschool and highschool students in Stockholm. The workshops, led by students at Animationsakademien, are taking place at the youth library Lava. REX is also planning to host ”school cinema” at Klarabiografen and Zita Folkets Bio, screening the very best of European animation.<br /><br />Information on films and tickets will be released in May. If you are a teacher interested in a school screening or workshop, please get in touch on info@rexanimation.se. The main festival, offering an extensive film programme for families and adults, can be visited at Zita Folkets Bio during the autumn break 29.10 – 1.11.
+        </KidsInfo>
       </TextContainer>
     <RexGifs>
         <Image src={gifR3} />
@@ -47,14 +46,12 @@ const RexGifs = styled.section`
   flex-direction: column;  
   visibility: hidden;
   
-
   @media (min-width: 668px) {
     display: flex;
     justify-content: space-around;
     visibility: visible;
     background-color: black;
     height: auto;
-
 `
 const Image = styled.img`
   width: 0;

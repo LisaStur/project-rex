@@ -187,14 +187,13 @@ export const Programme = () => {
         </ProgrammePoint>
       </DayContainer>
     </ProgrammeContainer>
-    
   )
 }
 
 const ProgrammeContainer = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;  
   color: white;
 
    @media (min-width: 668px) {

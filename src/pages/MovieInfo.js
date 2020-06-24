@@ -3,8 +3,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { fetchMovie } from 'reducers/moviesReducer'
-//import { BackIcon } from '../components/BackIcon'
-//import '../style/movieInfo.css'
 
 export const MovieInfo = () => {
   const { title } = useParams()
