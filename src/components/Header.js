@@ -26,7 +26,6 @@ const NavbarBigScreen = () => {
       <StyledLink to={'/programme'}>Programme</StyledLink>
       <StyledLink to={'/rexkids'}>REX Kids</StyledLink>
       <StyledLink to={'/awards'}>Awards</StyledLink>
-
     </NavContainerBigScreen>
   )
 
@@ -60,23 +59,12 @@ const HeaderContainer = styled.section`
     align-items: center;
   }
 `
-
-/*const CountAndNavContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-
- @media (min-width: 668px) {
-  flex-direction: column;
-  }
-`*/
-
 const BackLink = styled(Link)`
   text-decoration: none;
   color: white;
   display: flex;
+  justify-content: flex-start;
 `
-
 const Btn = styled.button`
   background-color: transparent;
   border: none;
@@ -91,7 +79,6 @@ const Btn = styled.button`
     height: 0;
   }
 `
-
 const NavContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -103,7 +90,6 @@ const NavContainer = styled.div`
     height: 0;
   }
 `
-
 const NavContainerBigScreen = styled.div `
   display: flex;
   visibility: hidden;
@@ -116,7 +102,6 @@ const NavContainerBigScreen = styled.div `
     justify-content: space-around;
     align-items: flex-end;
   }
-
 `
 const StyledLink = styled(NavLink)`
   text-decoration: none;
