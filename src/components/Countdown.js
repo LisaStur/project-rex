@@ -29,13 +29,13 @@ export const Countdown = () => {
 
   const timerComponents = []
 
-  Object.keys(timeLeft).forEach(interval => {
+  Object.keys(timeLeft).forEach((interval, i) => {
     if (!timeLeft[interval]) {
       return
     }
 
     timerComponents.push(
-      <span>
+      <span key={i}>
         {timeLeft[interval]} {interval}{' '}
       </span>
     )

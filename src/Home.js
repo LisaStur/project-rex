@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route} from 'react-router-dom'
 import { StartPage } from 'pages/StartPage'
 import { InfoPage } from 'pages/InfoPage'
 import { Movies } from 'pages/Movies'
@@ -20,6 +20,7 @@ import { RexKids } from 'pages/RexKids'
 import { Awards } from 'pages/Awards'
 import { Header } from 'components/Header'
 import { Footer } from 'components/Footer'
+  
 
 export const Home = () => {
 
@@ -81,7 +82,7 @@ export const Home = () => {
         <Route path='/awards'>
           <Awards />
         </Route>
-      </Switch>
+      </Switch> 
       <Footer />
     </BrowserRouter>
   )
