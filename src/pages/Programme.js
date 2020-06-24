@@ -8,13 +8,13 @@ export const Programme = () => {
     <ProgrammeContainer>
       <DayContainer>
         <DayHeader>Thursday 29/10</DayHeader> 
-        <ProgrammePoint>
+        <Workshop>
           <SectionLink to={`/rexkids`}>
           <PointTitle>15:00 REX at LAVA</PointTitle>
-          <PointInfo>Gametrailer, Games and 3D/CG Animation (age 14-25)</PointInfo>
+          <PointInfo>Workshop Gametrailer, Games and 3D/CG Animation (age 14-25)</PointInfo>
           </SectionLink>
           <VenueLink href='https://kulturhusetstadsteatern.se/Bibliotek/Lava_Bibliotek_Verkstad/Evenemang/2017/Lava-3-animation/' target='blank'>Lava</VenueLink>
-        </ProgrammePoint>
+        </Workshop>
         <ProgrammePoint> 
           <SectionLink to={`/memories`}>
             <PointTitle>18:00 Memories</PointTitle>
@@ -39,20 +39,20 @@ export const Programme = () => {
       </DayContainer>
       <DayContainer>
         <DayHeader>Friday 30/10</DayHeader>
-        <ProgrammePoint >
+        <Workshop >
           <SectionLink to={`/rexkids`}>
             <PointTitle >15:00 REX at LAVA</PointTitle>
-            <PointInfo>Gametrailer, Games and 3D/CG Animation (age 14-25)</PointInfo>
+            <PointInfo>Workshop Gametrailer, Games and 3D/CG Animation (age 14-25)</PointInfo>
           </SectionLink>
           <VenueLink href='https://kulturhusetstadsteatern.se/Bibliotek/Lava_Bibliotek_Verkstad/Evenemang/2017/Lava-3-animation/' target='blank'>Lava</VenueLink>
-        </ProgrammePoint>
-        <ProgrammePoint>
+        </Workshop>
+        <Workshop>
           <SectionLink to={`/rexkids`}>
             <PointTitle>17:00 REX at LAVA</PointTitle>
             <PointInfo>Meet director, Jenny Jokela (age 14-25)</PointInfo>
           </SectionLink>
           <VenueLink href='https://kulturhusetstadsteatern.se/Bibliotek/Lava_Bibliotek_Verkstad/' target='blank'>Lava</VenueLink>
-        </ProgrammePoint>
+        </Workshop>
         <ProgrammePoint>
           <SectionLink to={`/realities`}>
             <PointTitle>17:00 Realities</PointTitle>
@@ -84,13 +84,13 @@ export const Programme = () => {
           </SectionLink>
           <VenueLink href='https://zita.se/' target='blank'>Zita 2</VenueLink>
         </ProgrammePoint>
-        <ProgrammePoint>
+        <Workshop>
           <SectionLink to={`/rexkids`}>
             <PointTitle>11:30 REX for Kids</PointTitle>
-            <PointInfo>Zoetrope Workshop (for all ages)</PointInfo>
+            <PointInfo>Workshop Zoetrope (for all ages)</PointInfo>
           </SectionLink>
           <VenueLink href='https://zita.se/' target='blank'>Zita</VenueLink>
-        </ProgrammePoint>
+        </Workshop>
         <ProgrammePoint>
           <SectionLink to={`/sensibilities`}>
             <PointTitle>12:00 Sensibilities</PointTitle>
@@ -143,13 +143,13 @@ export const Programme = () => {
           </SectionLink>
           <VenueLink href='https://zita.se/' target='blank'>Zita 2</VenueLink>
         </ProgrammePoint>
-        <ProgrammePoint >
+        <Workshop >
           <SectionLink to={`/rexkids`}>
             <PointTitle>11:30 REX for Kids</PointTitle>
-            <PointInfo>Stop Motion Workshop (for all ages)</PointInfo>
+            <PointInfo>Workshop Stop Motion (for all ages)</PointInfo>
           </SectionLink>
           <VenueLink href='https://zita.se/' target='blank'>Zita </VenueLink>
-        </ProgrammePoint>
+        </Workshop>
         <ProgrammePoint>
           <SectionLink to={`/dependencies`}>
             <PointTitle>12:00 Dependencies</PointTitle>
@@ -178,13 +178,13 @@ export const Programme = () => {
           </SectionLink>
           <VenueLink href='https://zita.se/' target='blank'>Zita 2</VenueLink>
         </ProgrammePoint>
-        <ProgrammePoint >
+        <ProgrammePointAward >
           <SectionLink to={`/awards`}>
             <PointTitle>20:00 REX Animation Student Award</PointTitle>
             <PointInfo>The award nominations and Award Ceremony</PointInfo>
           </SectionLink>
           <VenueLink href='https://zita.se/' target='blank'>Zita 1</VenueLink>
-        </ProgrammePoint>
+        </ProgrammePointAward>
       </DayContainer>
     </ProgrammeContainer>
   )
@@ -213,6 +213,35 @@ const ProgrammePoint = styled.section`
   display: flex;
   flex-direction: column;
   background-color: black;
+  color: white;
+  margin: 0 2% 1% 2%;
+  padding: 2%;
+
+  @media (min-width: 668px) {
+    margin: 2%;
+    padding: 5%;
+  }
+`
+const ProgrammePointAward = styled.section`
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  border: 3px solid #d4af37;
+  color: white;
+  margin: 0 2% 1% 2%;
+  padding: 2%;
+
+  @media (min-width: 668px) {
+    margin: 2%;
+    padding: 5%;
+  }
+`
+
+
+const Workshop = styled.section`
+  display: flex;
+  flex-direction: column;
+  background-color: #4b5356;
   color: white;
   margin: 0 2% 1% 2%;
   padding: 2%;
