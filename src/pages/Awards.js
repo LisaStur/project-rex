@@ -11,6 +11,7 @@ import UglyAwWin18 from '../assets/UglyAwWin18.jpg'
 import stud18 from '../assets/stud18.gif'
 import KatthatStudWin18 from '../assets/KatthatStudWin18.png' 
 
+
 export const Awards = () => {
 
   return (
@@ -24,8 +25,9 @@ export const Awards = () => {
         <AwardCard>
           <WinnerLogo src={stud20} alt='Rex Animation Student Award Logo 2020' />
           <WinnerInfo>REX Animation Student Award 2020</WinnerInfo>
-          <AwardInfo>For the 5th year in a row, REX presents the award for best animated Swedish student production. The nominations are screened Sunday, November 1st. The winner is announced by the jury at the end of the screening. There will be a prize ceremony and a glass of bubbly for all!</AwardInfo>
-          
+          <AwardInfo>
+            For the 5th year in a row, REX presents the award for best animated Swedish student production. The nominations are screened Sunday, November 1st. The winner is announced by the jury at the end of the screening. There will be a prize ceremony and a glass of bubbly for all!
+          </AwardInfo>
         </AwardCard>
       </Year>
       <Year>
@@ -69,7 +71,7 @@ const AwardCard = styled.div`
   @media (min-width: 668px) {
     width: 48%;
   }
-  `
+`
 const Year = styled.div`
   display: flex;
   flex-direction: column;
@@ -93,7 +95,6 @@ const AwardInfo = styled.div`
   font-size: 18px;
   width: 88%;
   padding: 5%;
- 
 `
 const WinnerInfo = styled.h1`
   background-color: black;
@@ -104,4 +105,4 @@ const WinnerInfo = styled.h1`
   height: auto;
   text-align: center;
   padding: 3% 5% 2% 5%;
-  `
+`

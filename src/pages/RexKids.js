@@ -4,6 +4,7 @@ import gifR3 from 'assets/gifR3.gif'
 import gifE3 from 'assets/gifE3.gif'
 import gifX3 from 'assets/gifX3.gif'
 
+
 export const RexKids = () => {
 
   return (

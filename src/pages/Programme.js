@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
+
 export const Programme = () => {
 
   return (
@@ -236,8 +237,6 @@ const ProgrammePointAward = styled.section`
     padding: 5%;
   }
 `
-
-
 const Workshop = styled.section`
   display: flex;
   flex-direction: column;

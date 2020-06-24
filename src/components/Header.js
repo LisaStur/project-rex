@@ -28,7 +28,6 @@ const NavbarBigScreen = () => {
       <StyledLink to={'/awards'}>Awards</StyledLink>
     </NavContainerBigScreen>
   )
-
 }
 
 export const Header = () => {

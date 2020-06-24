@@ -64,4 +64,4 @@ const CountdownContainer = styled.div`
     @media (min-width: 1024px) {
      font-size: 36px;
   }
-  `
+`

@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { fetchMovie } from 'reducers/moviesReducer'
 
+
 export const MovieInfo = () => {
   const { title } = useParams()
   const dispatch = useDispatch()
@@ -53,7 +54,7 @@ const Image = styled.img`
     width: 50%;
     height: auto;
   }
-  `
+`
 const BigScreenContainer = styled.section`
   display: flex;
   flex-direction: column;
@@ -77,7 +78,7 @@ const InfoTitle = styled.h1`
     padding-left: 10%;
     padding-top: 0;
   }
-  `
+`
 const MainInfo = styled.h2`
   color: white;
   font-size: 24px;
@@ -87,7 +88,7 @@ const MainInfo = styled.h2`
     padding-left: 10%;
     padding-top: 0;
   }
-  `
+`
 const ProdInfo = styled.h2`
   color: white;
   font-size: 20px;
@@ -97,10 +98,10 @@ const ProdInfo = styled.h2`
     padding-left: 10%;
     padding-top: 0;
   }
-  `
+`
   const Synopsis = styled.p`
   color: white;
   font-size: 20px;
   padding-top: 2%;
   margin: 0;
-  `
+`

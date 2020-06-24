@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import gifR from 'assets/gifR.gif'
 import gifE2 from 'assets/gifE2.gif'
 import gifX from 'assets/gifX.gif'
-//import { RexX } from 'components/RexX'
+
 
 export const StartPage = () => {
 
@@ -69,14 +69,12 @@ const RexGifs = styled.section`
   flex-direction: column;  
   visibility: hidden;
   
-
   @media (min-width: 668px) {
     display: flex;
     justify-content: space-around;
     visibility: visible;
     background-color: black;
     height: auto;
-
 `
 const Image = styled.img`
   width: 0;

@@ -12,8 +12,6 @@ export const Burger = () => {
 )
 }
 
-
-
 const Bar = styled.div`
   display: flex;
   flex-direction: column;
@@ -23,5 +21,4 @@ const Bar = styled.div`
   margin-bottom: 5px;
   margin-right: 16px;
   border-radius: 16px;
-  
-  `
+`

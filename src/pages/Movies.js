@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { fetchMovies } from 'reducers/moviesReducer'
 
+
 export const Movies = () => {
   const dispatch = useDispatch()
   const movies = useSelector(store => store.reducer.all)
@@ -56,7 +57,7 @@ const MovieInfoLink= styled(Link)`
 const Image = styled.img`
   width: 100%;
   height: auto;
-  `
+`
 const MovieTitle = styled.h1`
   color: white;
   font-size: 20px;
@@ -64,5 +65,5 @@ const MovieTitle = styled.h1`
   text-align: center;
   padding-left: 2%;
   padding-right 2%;
-  `
+`
 

@@ -58,7 +58,6 @@ const SponsorContainer = styled.section`
   flex-flow: row wrap;
   background-color: black;
   justify-content: center;
-
 `
 const Image = styled.img`
   width: auto;

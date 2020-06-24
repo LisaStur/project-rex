@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import gifR from 'assets/gifR.gif'
 import gifE2 from 'assets/gifE2.gif'
 import gifX from 'assets/gifX.gif'
-//import { RexX } from 'components/RexX'
+
 
 export const InfoPage = () => {
 
@@ -76,7 +76,6 @@ const RexGifs = styled.section`
     visibility: visible;
     background-color: black;
     height: auto;
-
 `
 const Image = styled.img`
   width: 0;

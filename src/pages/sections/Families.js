@@ -42,7 +42,6 @@ const SectionPage = styled.section`
   display: flex;
   flex-direction: column;
 `
-
 const HeaderSection = styled.section`
   display: flex;
   flex-direction: column;
@@ -66,7 +65,6 @@ const SectionSreenings = styled.p`
   padding-left: 2%;
   margin: 0;
 `
-
 const SectionCard = styled.section`
   display: flex;
   flex-direction: column;
@@ -102,7 +100,7 @@ const SectionTitle = styled.h1`
     padding-left: 2%;
     padding-top: 0;
   }
-  `
+`
 const SectionDirector = styled.h2`
   color: white;
   font-size: 20px;
@@ -112,7 +110,7 @@ const SectionDirector = styled.h2`
     padding-left: 2%;
     padding-top: 0;
   }
-  `
+`
 const SectionInfo = styled.h2`
   color: white;
   font-size: 18px;
@@ -122,7 +120,7 @@ const SectionInfo = styled.h2`
     padding-left: 2%;
     padding-top: 0;
   }
-  `
+`
 const SectionSynopsis = styled.p`
   color: white;
   font-size: 16px;
@@ -132,4 +130,4 @@ const SectionSynopsis = styled.p`
    @media (min-width: 668px) {
     padding-left: 2%;
   }
-  `
+`
