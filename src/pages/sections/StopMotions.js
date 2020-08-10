@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import { BackLink } from 'components/BackLink'
 
 export const StopMotions = () => {
   const [stopMotions, setStopMotions] = useState([])
@@ -17,6 +18,9 @@ export const StopMotions = () => {
   return (
     <SectionPage>
       <HeaderSection>
+        <BackLink to='/programme' >
+          ⬅ Back to Programme
+        </BackLink>
         <SectionHeader>Stop Motion</SectionHeader>
         <SectionPitch>REX highlights the beauty and variety of stop motion with 6 short films. From dark comedy to experimental, from the conditions for people in a totalitarian state to beach life dilemmas. Realistic stop motion, dreamy stop motion, the common theme is a celebration of all types of stories that can be told with this animation technique.</SectionPitch>
         <SectionSreenings>Thursday 19:30 Zita 2</SectionSreenings>

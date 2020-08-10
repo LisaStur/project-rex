@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import { BackLink } from 'components/BackLink'
 
 export const Halloween = () => {
   const [halloweens, setHalloweens] = useState([])
@@ -17,6 +18,9 @@ export const Halloween = () => {
   return (
     <SectionPage>
       <HeaderSection>
+        <BackLink to='/programme' >
+          ⬅ Back to Programme
+        </BackLink>
         <SectionHeader>Halloween Night</SectionHeader>
         <SectionPitch>A block of spooky shorts so good it’s scary! Tales of comedy horror, warped realities and creepy creatures that play tricks on our minds. A mix of stop motion, CG and cel animation. REX is the go to place for the spooky and the weird so celebrate Halloween Night with us. Trick or treat candy bags for all, included in ticket!</SectionPitch>
         <SectionSreenings>Thursday 21:00 Zita 1</SectionSreenings>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import { BackLink } from 'components/BackLink'
 
 export const DeadMan = () => {
   const [deadMen, setDeadMen] = useState([])
@@ -17,9 +18,13 @@ export const DeadMan = () => {
   return (
     <SectionPage>
       <HeaderSection>
+        <BackLink to='/programme' >
+          ⬅ Back to Programme
+        </BackLink>
         <SectionHeader>A Man is Dead</SectionHeader>
         <SectionPitch>One of this years' two animated features, showing on gala venue Capitol.</SectionPitch>
         <SectionSreenings>Saturday 14:30 Capitol</SectionSreenings>
+        
       </HeaderSection>
       {deadMen.map(deadMan => (
         <SectionCard key={deadMan.title}>

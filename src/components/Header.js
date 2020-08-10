@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink, Link, Route } from 'react-router-dom'
+import { NavLink, Route } from 'react-router-dom'
 import styled from 'styled-components'
 import { Burger } from './Burger'
 import { GifHeader } from './GifHeader'
@@ -41,9 +41,6 @@ export const Header = () => {
           {open && <Navbar />}
           <NavbarBigScreen />
       <Route path='/movieinfo/:title'>
-        <BackLink to='/movies' >
-          ⇦ Back to movie list
-          </BackLink>
       </Route>
     </HeaderContainer> 
   )
@@ -58,12 +55,7 @@ const HeaderContainer = styled.section`
     align-items: center;
   }
 `
-const BackLink = styled(Link)`
-  text-decoration: none;
-  color: white;
-  display: flex;
-  justify-content: flex-start;
-`
+
 const Btn = styled.button`
   background-color: transparent;
   border: none;
@@ -105,7 +97,7 @@ const NavContainerBigScreen = styled.div `
 const StyledLink = styled(NavLink)`
   text-decoration: none;
   color: white;
-  fonst-size: 12px;
+  font-size: 20px;
   
   &:hover {
     font-weight: bold;

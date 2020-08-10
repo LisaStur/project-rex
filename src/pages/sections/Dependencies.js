@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import { BackLink } from 'components/BackLink'
 
 export const Dependencies = () => {
   const [dependencies, setDependencies] = useState([])
@@ -17,6 +18,9 @@ export const Dependencies = () => {
   return (
     <SectionPage>
       <HeaderSection>
+        <BackLink to='/programme' >
+          ⬅ Back to movie list
+        </BackLink>
         <SectionHeader>Dependencies</SectionHeader>
         <SectionPitch>It depends… 6 short films about relationships between couples, individuals and groups, and still and moving images. </SectionPitch>
         <SectionSreenings>Friday 20:30 Zita 2</SectionSreenings>

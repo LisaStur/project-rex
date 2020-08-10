@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import { BackLink } from 'components/BackLink'
 
 export const Kids = () => {
   const [kids, setKids] = useState([])
@@ -17,6 +18,9 @@ export const Kids = () => {
   return (
     <SectionPage>
       <HeaderSection>
+        <BackLink to='/programme' >
+          ⬅ Back to Programme
+        </BackLink>
         <SectionHeader>REX for Kids</SectionHeader>
         <SectionPitch>To our youngest audience (age 4 and up) we offer six films showcasing a variety of techniques and stories. In this block, toys come alive and sporty animals are up for competition. After loss and winter, there will always be a spring. Join a bird with an urge to dance or team up with a dachshund whose limbs are disagreeing over the way forward.</SectionPitch>
         <SectionSreenings>Saturday 11:00 Zita 2</SectionSreenings>

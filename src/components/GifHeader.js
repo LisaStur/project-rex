@@ -18,13 +18,14 @@ export const GifHeader = () => {
 const GifContainer = styled.section`
 display: flex;
 flex-direction: row;
+justify-content: space-evenly;
 background-color: black;
 `
 const Image = styled.img`
-  width: 25%;
+  width: 15%;
   height: auto;
 `
 const BigImage = styled.img`
-  width: 50%;
+  width: 30%;
   height: auto;
 `

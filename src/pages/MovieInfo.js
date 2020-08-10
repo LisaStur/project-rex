@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { fetchMovie } from 'reducers/moviesReducer'
+import { BackLink } from 'components/BackLink'
 
 
 export const MovieInfo = () => {
@@ -26,6 +27,9 @@ export const MovieInfo = () => {
   return (
     <InfoContainer>
       <BigScreenContainer>
+        <BackLink to='/movies' >
+          ⬅ Back to movie list
+        </BackLink>
       <Image src={info.imageUrl} alt={info.title} />  
       <MainTextContainer>
           <InfoTitle>{info.title}</InfoTitle>

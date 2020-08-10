@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import { BackLink } from 'components/BackLink'
 
 export const Sensibilities = () => {
   const [sensibilities, setSensibilities] = useState([])
@@ -17,6 +18,9 @@ export const Sensibilities = () => {
   return (
     <SectionPage>
       <HeaderSection>
+        <BackLink to='/programme' >
+          ⬅ Back to Programme
+        </BackLink>
         <SectionHeader>Sensibilities</SectionHeader>
         <SectionPitch>5 short animated films that are free flowing and thought provoking, with a common sensibility and stunning visual style. Experience urban tales, climate angst, mothers with Alzheimer’s and groovy pink apes!</SectionPitch>
         <SectionSreenings>Saturday 12:00 Zita 2</SectionSreenings>

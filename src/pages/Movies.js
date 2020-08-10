@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import { fetchMovies } from 'reducers/moviesReducer'
 
 
+
 export const Movies = () => {
   const dispatch = useDispatch()
   const movies = useSelector(store => store.reducer.all)
@@ -17,7 +18,7 @@ export const Movies = () => {
   }, [dispatch, movies.length])
 
   return (
-    <MoviePage>   
+    <MoviePage> 
       {movies.map(movie => (
         <MovieCard key={movie.title}>
           <MovieInfoLink to={`/movieinfo/${movie.title}`}>

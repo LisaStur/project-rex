@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import { BackLink } from 'components/BackLink'
 
 export const Memories = () => {
   const [memories, setMemories] = useState([])
@@ -17,6 +18,9 @@ export const Memories = () => {
   return (
     <SectionPage>
       <HeaderSection>
+        <BackLink to='/programme' >
+          ⬅ Back to Programme
+        </BackLink>
         <SectionHeader>Memories</SectionHeader>
         <SectionPitch>Grumpy cats sick of life, stuffy metropolitans, film noir pastiche, memories of love and childhood. People being alone together – 5 short animated films that you won’t forget anytime soon.</SectionPitch>
         <SectionSreenings>Thursday 18:00 Zita 2</SectionSreenings>
