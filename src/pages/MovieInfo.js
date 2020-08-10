@@ -26,10 +26,10 @@ export const MovieInfo = () => {
 
   return (
     <InfoContainer>
+      <BackLink to='/movies' >
+        ⬅ Back to movie list
+      </BackLink>
       <BigScreenContainer>
-        <BackLink to='/movies' >
-          ⬅ Back to movie list
-        </BackLink>
       <Image src={info.imageUrl} alt={info.title} />  
       <MainTextContainer>
           <InfoTitle>{info.title}</InfoTitle>

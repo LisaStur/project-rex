@@ -7,4 +7,5 @@ export const BackLink = styled(Link)`
   display: flex;
   justify-content: flex-start;
   margin: 0 0 2% 2%;
+  font-size: 20px;  
 `
