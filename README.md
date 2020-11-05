@@ -1,10 +1,15 @@
-# Final Project Technigo Bootcamp 2020
+# REX Animation Film Festival
 
 Preparing a new home for Rex Animation festival, a Filmfestival in Stockholm every autumn.
-Currently using the 2019 content to get a picture of how it will work.
-Using Javacript, React, React Routers, Redux and Styled Components.
+Currently using the 2019 festival entries in the backend for the mockup.
 
+## Technology
+Using Javacript, React, React Routers, Redux and Styled Components in the frontend.
+Backend built in Node.js with Express and using Mongoose.
+
+## View it live:
 https://rex-animation-using2019.netlify.app/
 
-Using the Rex Database API.
-https://rex-database2019.herokuapp.com/movies
+## Backend
+https://github.com/LisaStur/rex-database
+View it live: https://rex-database2019.herokuapp.com/movies
