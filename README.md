@@ -8,6 +8,7 @@ Using Javacript, React, React Routers, Redux and Styled Components in the fronte
 Backend built in Node.js with Express and using Mongoose.
 
 ## View it live:
+(The API goes to sleep when not in use, please allow some time for it to wake up...)
 https://rex-animation-using2019.netlify.app/
 
 ## Backend
